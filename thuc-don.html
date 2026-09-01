@@ -92,6 +92,13 @@
         <p>Thực đơn tham khảo — quán sẽ cập nhật thêm món theo mùa.</p>
       </div>
 
+      <div class="tuchon-banner" id="tuChonBanner">
+        <div>
+          <strong>Tự chọn món — tự ra gói tiệc của riêng bạn</strong>
+          <p>Bấm <span class="tc-plus">+ Chọn</span> ở từng món bên dưới, quán cộng tổng tiền ngay cho bạn. Chọn xong bấm <strong style="display:inline; color:var(--clay-deep);">“Xong — tạo gói”</strong> ở thanh cuối màn hình để mang gói này về trang đặt tiệc.</p>
+        </div>
+      </div>
+
       <div class="reel-frame">
         <div class="reel-slides" id="reelSlides">
           <img class="reel-slide active" loading="lazy" src="images/vit-quay-gion-da.jpg" width="1080" height="810" decoding="async" alt="Vịt quay giòn da">
@@ -290,6 +297,21 @@
           <p class="menu-note" style="text-align:center;">Món ăn lẻ (bún, phở, cơm...) đang được quán cập nhật thêm — vui lòng gọi hotline <strong style="color:var(--ink); font-style:normal;">0931.7944.88 – 0935.199.557</strong> để được tư vấn trực tiếp.</p>
         </div>
       </div>
+    </div>
+
+    <!-- Thanh gói tự chọn: hiện lên khi khách đã chọn ít nhất 1 món -->
+    <div class="gio-bar" id="gioBar" aria-live="polite">
+      <button type="button" class="gio-toggle" id="gioToggle" aria-expanded="false" aria-controls="gioList">
+        <span class="gio-count" id="gioCount">0</span>
+        <span class="gio-txt">món trong gói tự chọn</span>
+        <span class="gio-total" id="gioTotal">0đ</span>
+      </button>
+      <div class="gio-actions">
+        <button type="button" class="btn gio-clear" id="gioClear">Xoá hết</button>
+        <a class="btn btn-primary" id="gioDone" href="/dat-tiec?goi=tu-chon#dat-tiec-nhanh">Xong — tạo gói</a>
+      </div>
+      <div class="gio-list" id="gioList"></div>
+      <p class="gio-note" id="gioNote"></p>
     </div>
   </section>
 </main>

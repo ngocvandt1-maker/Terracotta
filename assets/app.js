@@ -43,6 +43,175 @@
   const FEATURED_PRICE = "225.000đ";
   const CHECK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>';
 
+  /* =========================================================
+     GÓI TỰ CHỌN — khách tự chọn món ở trang thực đơn, hệ thống
+     cộng tổng tiền rồi trả gói về form "Đặt tiệc nhanh".
+     Gói được nhớ trong localStorage nên chuyển trang không mất.
+     ========================================================= */
+  const GOI_KEY = 'dgv_goi_tu_chon';
+  const TU_CHON = 'tu-chon';
+  const tien = (n) => Number(n || 0).toLocaleString('vi-VN') + 'đ';
+
+  function docGoi(){
+    try {
+      const g = JSON.parse(localStorage.getItem(GOI_KEY) || 'null');
+      if (!g || !Array.isArray(g.mon) || !g.mon.length) return null;
+      return g;
+    } catch (e) { return null; }
+  }
+  function luuGoi(mon){
+    try {
+      if (!mon || !mon.length) { localStorage.removeItem(GOI_KEY); return; }
+      localStorage.setItem(GOI_KEY, JSON.stringify({ mon: mon, tong: tongGoi(mon), luc: Date.now() }));
+    } catch (e) {}
+  }
+  function xoaGoi(){ try { localStorage.removeItem(GOI_KEY); } catch (e) {} }
+  function tongGoi(mon){ return mon.reduce((s, m) => s + (m.gia || 0) * m.sl, 0); }
+  function demMon(mon){ return mon.reduce((s, m) => s + m.sl, 0); }
+  function monThoiGia(mon){ return mon.filter(m => !m.gia).reduce((s, m) => s + m.sl, 0); }
+
+  // "65k/đĩa" → 65000 · "7.5k" → 7500 · "11–14k" → 14000 · "Theo thời giá" → 0
+  function docGia(txt){
+    const m = String(txt || '').match(/(\d+(?:[.,]\d+)?)\s*k/i);
+    return m ? Math.round(parseFloat(m[1].replace(',', '.')) * 1000) : 0;
+  }
+  function docDonVi(txt){
+    const m = String(txt || '').match(/\/\s*([^\s,]+)/);
+    return m ? m[1] : 'phần';
+  }
+  // Xem thử bằng file:// thì đổi đường dẫn sạch sang tên file .html
+  const TRANG_FILE = {
+    '/': 'index.html', '/gioi-thieu': 'gioi-thieu.html', '/thuc-don': 'thuc-don.html',
+    '/dat-tiec': 'dat-tiec.html', '/khu-tre-em': 'khu-tre-em.html', '/lien-he': 'lien-he.html'
+  };
+  function duongDan(p){
+    return (location.protocol === 'file:' && TRANG_FILE[p]) ? TRANG_FILE[p] : p;
+  }
+  const LINK_THUC_DON = () => duongDan('/thuc-don') + '?tu-chon=1#menu';
+
+  /* ===== Trang thực đơn: nút chọn món + thanh gói dưới màn hình ===== */
+  (function(){
+    const secMenu = document.getElementById('menu');
+    const bar = document.getElementById('gioBar');
+    if (!secMenu || !bar) return;
+
+    const goiCu = docGoi();
+    let mon = goiCu ? goiCu.mon.slice() : [];
+
+    const countEl = document.getElementById('gioCount');
+    const totalEl = document.getElementById('gioTotal');
+    const listEl = document.getElementById('gioList');
+    const noteEl = document.getElementById('gioNote');
+    const toggleEl = document.getElementById('gioToggle');
+    const doneEl = document.getElementById('gioDone');
+
+    const timMon = (ten) => mon.find(m => m.ten === ten);
+
+    // Gắn nút chọn vào từng dòng món
+    secMenu.querySelectorAll('.menu-item').forEach(item => {
+      const tenEl = item.querySelector('.name');
+      const giaEl = item.querySelector('.price');
+      if (!tenEl || !giaEl) return;
+      const ten = tenEl.textContent.trim();
+      item.dataset.ten = ten;
+      item.dataset.gia = docGia(giaEl.textContent);
+      item.dataset.dv = docDonVi(giaEl.textContent);
+      const pick = document.createElement('div');
+      pick.className = 'mon-pick';
+      item.appendChild(pick);
+      veItem(item);
+    });
+
+    function veItem(item){
+      const pick = item.querySelector('.mon-pick');
+      if (!pick) return;
+      const m = timMon(item.dataset.ten);
+      const sl = m ? m.sl : 0;
+      if (sl > 0) {
+        pick.innerHTML =
+          '<button type="button" class="mon-btn mon-step" data-buoc="-1" aria-label="Bớt 1 ' + item.dataset.ten + '">−</button>' +
+          '<span class="mon-sl">' + sl + '</span>' +
+          '<button type="button" class="mon-btn mon-step" data-buoc="1" aria-label="Thêm 1 ' + item.dataset.ten + '">+</button>';
+        item.classList.add('da-chon');
+      } else {
+        pick.innerHTML = '<button type="button" class="mon-btn" data-buoc="1" aria-label="Chọn ' + item.dataset.ten + ' vào gói tự chọn">+ Chọn</button>';
+        item.classList.remove('da-chon');
+      }
+    }
+
+    function doiSL(item, buoc){
+      const ten = item.dataset.ten;
+      const m = timMon(ten);
+      if (m) {
+        m.sl += buoc;
+        if (m.sl <= 0) mon = mon.filter(x => x.ten !== ten);
+      } else if (buoc > 0) {
+        mon.push({ ten: ten, gia: parseInt(item.dataset.gia, 10) || 0, dv: item.dataset.dv, sl: 1 });
+      }
+      veItem(item);
+      luuGoi(mon);
+      veBar();
+    }
+
+    secMenu.addEventListener('click', (e) => {
+      const btn = e.target.closest('.mon-pick .mon-btn');
+      if (!btn) return;
+      doiSL(btn.closest('.menu-item'), parseInt(btn.dataset.buoc, 10));
+    });
+
+    function veBar(){
+      const so = demMon(mon);
+      bar.classList.toggle('hien', so > 0);
+      countEl.textContent = so;
+      totalEl.textContent = tien(tongGoi(mon));
+      const tg = monThoiGia(mon);
+      noteEl.textContent = tg
+        ? 'Tạm tính — còn ' + tg + ' món theo thời giá, quán báo giá khi xác nhận.'
+        : 'Tạm tính theo bảng giá, chưa gồm VAT.';
+      listEl.innerHTML = mon.map(m =>
+        '<div class="gio-row" data-ten="' + m.ten.replace(/"/g, '&quot;') + '">' +
+          '<span class="gr-ten">' + m.ten + '</span>' +
+          '<button type="button" class="mon-btn mon-step gr-btn" data-buoc="-1" aria-label="Bớt ' + m.ten + '">−</button>' +
+          '<span class="mon-sl">' + m.sl + '</span>' +
+          '<button type="button" class="mon-btn mon-step gr-btn" data-buoc="1" aria-label="Thêm ' + m.ten + '">+</button>' +
+          '<span class="gr-tien">' + (m.gia ? tien(m.gia * m.sl) : 'theo thời giá') + '</span>' +
+        '</div>').join('');
+    }
+
+    listEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.gr-btn');
+      if (!btn) return;
+      const ten = btn.closest('.gio-row').dataset.ten;
+      const item = Array.from(secMenu.querySelectorAll('.menu-item')).find(i => i.dataset.ten === ten);
+      if (item) doiSL(item, parseInt(btn.dataset.buoc, 10));
+    });
+
+    toggleEl.addEventListener('click', () => {
+      const mo = listEl.classList.toggle('hien');
+      toggleEl.setAttribute('aria-expanded', mo ? 'true' : 'false');
+    });
+
+    document.getElementById('gioClear').addEventListener('click', () => {
+      mon = [];
+      xoaGoi();
+      secMenu.querySelectorAll('.menu-item').forEach(veItem);
+      veBar();
+    });
+
+    doneEl.setAttribute('href', duongDan('/dat-tiec') + '?goi=tu-chon#dat-tiec-nhanh');
+    doneEl.addEventListener('click', () => luuGoi(mon));
+
+    // Đến từ trang đặt tiệc: làm nổi lời hướng dẫn
+    if (/[?&]tu-chon=1/.test(location.search)) {
+      const banner = document.getElementById('tuChonBanner');
+      if (banner) {
+        banner.classList.add('hot');
+        setTimeout(() => banner.scrollIntoView({ behavior: 'smooth', block: 'center' }), 120);
+      }
+    }
+    veBar();
+  })();
+
   const pkgGrid = document.getElementById('pkgGrid');
   if (pkgGrid) {
     PKG_DATA.forEach(pkg => {
@@ -141,13 +310,43 @@
       if (pkg.price === FEATURED_PRICE) opt.selected = true;
       pkgSelect.appendChild(opt);
     });
+    const optTuChon = document.createElement('option');
+    optTuChon.value = TU_CHON;
+    optTuChon.textContent = 'Gói tự chọn — tự chọn món ở trang thực đơn';
+    pkgSelect.appendChild(optTuChon);
+
     const optAsk = document.createElement('option');
     optAsk.textContent = 'Chưa rõ, cần tư vấn';
     pkgSelect.appendChild(optAsk);
 
     const pkgPreview = document.getElementById('pkgPreview');
+    function veGoiTuChon(){
+      const g = docGoi();
+      if (!g) {
+        pkgPreview.innerHTML =
+          '<strong>Gói tự chọn — bạn tự ghép thực đơn</strong>' +
+          '<p class="tc-huong">Sang trang thực đơn, bấm “+ Chọn” ở từng món bạn thích. Chọn xong bấm “Xong — tạo gói”, quán sẽ cộng tổng tiền và điền lại ngay vào đây.</p>' +
+          '<a class="btn btn-primary tc-btn" href="' + LINK_THUC_DON() + '">Mở thực đơn để chọn món</a>';
+        return;
+      }
+      const tg = monThoiGia(g.mon);
+      pkgPreview.innerHTML =
+        '<strong>Gói tự chọn — ' + g.mon.length + ' món (' + demMon(g.mon) + ' phần)</strong>' +
+        '<ul class="tc-list">' + g.mon.map(m =>
+          '<li><span>' + m.ten + ' <b>×' + m.sl + '</b></span>' +
+          '<span class="tc-tien">' + (m.gia ? tien(m.gia * m.sl) : 'theo thời giá') + '</span></li>').join('') +
+        '</ul>' +
+        '<div class="tc-tong"><span>Tổng gói tự chọn</span><span class="tc-so">' + tien(tongGoi(g.mon)) + '</span></div>' +
+        '<p class="tc-huong" style="margin:8px 0 0;">Tạm tính theo bảng giá, chưa gồm VAT' +
+          (tg ? ' · còn ' + tg + ' món theo thời giá quán sẽ báo khi xác nhận' : '') + '.</p>' +
+        '<div class="tc-actions">' +
+          '<a class="btn btn-primary" href="' + LINK_THUC_DON() + '">Sửa / thêm món</a>' +
+          '<button type="button" class="btn tc-xoa">Xoá gói này</button>' +
+        '</div>';
+    }
     function updatePkgPreview(){
       if (!pkgPreview) return;
+      if (pkgSelect.value === TU_CHON) { veGoiTuChon(); return; }
       const found = PKG_DATA.find(p => (p.price + '/khách') === pkgSelect.value);
       if (found) {
         pkgPreview.innerHTML = '<strong>Món trong set ' + found.price + '/khách:</strong>' +
@@ -166,6 +365,22 @@
         updatePkgPreview();
       });
     });
+
+    pkgPreview.addEventListener('click', (e) => {
+      if (!e.target.closest('.tc-xoa')) return;
+      xoaGoi();
+      updatePkgPreview();
+    });
+
+    // Vừa tạo gói bên trang thực đơn xong quay về: chọn sẵn "Gói tự chọn"
+    if (/[?&]goi=tu-chon/.test(location.search)) {
+      pkgSelect.value = TU_CHON;
+      updatePkgPreview();
+      setTimeout(() => {
+        const khung = document.getElementById('dat-tiec-nhanh');
+        if (khung) khung.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 120);
+    }
   }
 
   // Video reel (auto-playing photo slideshow)
@@ -221,7 +436,7 @@
      Hướng dẫn lấy link: xem file google-apps-script-dat-tiec.gs
      Để trống thì form vẫn chạy được, nhưng quán KHÔNG nhận được đơn tự động.
      ========================================================= */
-  const BOOKING_ENDPOINT = "https://script.google.com/macros/s/AKfycbz2Z-08MKKZHziCHg50CJkJ4uyBIjeajDnTkWxG0TG2fMh9EoHX-2jn7JMpMur6YlGr/exec";
+  const BOOKING_ENDPOINT = "https://script.google.com/macros/s/AKfycbwHnQZKu8IcCJDEWK9rn2DuXsyay-zSgmbzBYa0NYl4u4ePEvz29gXxFaPrFQgWFTx6/exec";
 
   const form = document.getElementById('bookingForm');
   const submitBtn = form ? form.querySelector('.form-submit') : null;
@@ -234,8 +449,23 @@
     const phone = data.get('fphone');
     const date = data.get('fdate');
     const guests = data.get('fguests');
-    const pkg = data.get('fpackage');
+    let pkg = data.get('fpackage');
     const note = data.get('fnote');
+
+    // Gửi kèm danh sách món của gói khách chọn — set có sẵn hay gói tự chọn đều gửi
+    let dsMon = '';
+    if (pkg === TU_CHON) {
+      const g = docGoi();
+      if (g) {
+        dsMon = g.mon.map(m => m.ten + ' ×' + m.sl + ' — ' + (m.gia ? tien(m.gia * m.sl) : 'theo thời giá')).join('; ');
+        pkg = 'Gói tự chọn — ' + g.mon.length + ' món, tạm tính ' + tien(tongGoi(g.mon));
+      } else {
+        pkg = 'Gói tự chọn (khách chưa chọn món)';
+      }
+    } else {
+      const set = PKG_DATA.find(p => (p.price + '/khách') === pkg);
+      if (set) dsMon = set.dishes.join('; ');
+    }
 
     const dateLabel = date ? new Date(date).toLocaleString('vi-VN', { dateStyle: 'long', timeStyle: 'short' }) : 'chưa chọn';
 
@@ -247,9 +477,10 @@
 
     document.getElementById('bookingCode').textContent = 'Mã đơn của bạn: ' + maDon;
     document.getElementById('bookingSummary').textContent =
-      `${name} · ${phone}\nThời gian: ${dateLabel}\nSố khách: ${guests} — ${pkg}` + (note ? `\nGhi chú: ${note}` : '');
+      `${name} · ${phone}\nThời gian: ${dateLabel}\nSố khách: ${guests} — ${pkg}` +
+      (dsMon ? `\nMón trong gói: ${dsMon}` : '') + (note ? `\nGhi chú: ${note}` : '');
 
-    const tinNhan = `Xin chào Đồng Gia Viên, tôi muốn đặt tiệc:\nMã đơn: ${maDon}\nHọ tên: ${name}\nSĐT: ${phone}\nThời gian: ${dateLabel}\nSố khách: ${guests}\nGói: ${pkg}${note ? '\nGhi chú: ' + note : ''}`;
+    const tinNhan = `Xin chào Đồng Gia Viên, tôi muốn đặt tiệc:\nMã đơn: ${maDon}\nHọ tên: ${name}\nSĐT: ${phone}\nThời gian: ${dateLabel}\nSố khách: ${guests}\nGói: ${pkg}${dsMon ? '\nMón trong gói: ' + dsMon : ''}${note ? '\nGhi chú: ' + note : ''}`;
 
     // Đếm đơn trong Google Analytics (chỉ chạy khi đã gắn mã GA)
     if (typeof gtag === 'function') {
@@ -267,13 +498,14 @@
         body: JSON.stringify({
           maDon: maDon,
           name: name, phone: phone, date: dateLabel, dateRaw: date,
-          guests: guests, pkg: pkg, note: note || '', trang: location.href
+          guests: guests, pkg: pkg, mon: dsMon,
+          note: note || '', trang: location.href
         })
       })
       .catch(() => {})
       .finally(() => {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Gửi cho quán — quán gọi lại trong 15 phút';
+        submitBtn.textContent = 'Gửi cho quán';
       });
     } else {
       console.warn('[Đồng Gia Viên] CHƯA dán link Google Apps Script vào BOOKING_ENDPOINT — đơn đặt tiệc KHÔNG chạy về quán.');
@@ -327,15 +559,9 @@
   /* ===== Xem thu ngay tren may: khi mo bang file:// thi doi link ve file .html ===== */
   (function(){
     if (location.protocol !== 'file:') return;
-    const map = {
-      '/': 'index.html', '/gioi-thieu': 'gioi-thieu.html', '/thuc-don': 'thuc-don.html',
-      '/dat-tiec': 'dat-tiec.html', '/khu-tre-em': 'khu-tre-em.html', '/lien-he': 'lien-he.html'
-    };
     document.querySelectorAll('a[href^="/"]').forEach(function(a){
       const h = a.getAttribute('href');
-      const i = h.indexOf('#');
-      const p = i < 0 ? h : h.slice(0, i);
-      const hash = i < 0 ? '' : h.slice(i);
-      if (map[p]) a.setAttribute('href', map[p] + hash);
+      const m = h.match(/^([^?#]*)(\?[^#]*)?(#.*)?$/);
+      if (m && TRANG_FILE[m[1]]) a.setAttribute('href', TRANG_FILE[m[1]] + (m[2] || '') + (m[3] || ''));
     });
   })();

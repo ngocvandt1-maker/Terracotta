@@ -713,3 +713,98 @@
     .nav-actions .call-chip{display:none;}
     .brand-text{white-space:nowrap; overflow:visible; text-overflow:clip; font-size:1.05rem;}
   }
+
+  /* ================================================================
+     GÓI TỰ CHỌN — khách tự bấm chọn món trong thực đơn, hệ thống
+     cộng tổng tiền rồi trả về form "Đặt tiệc nhanh" ở trang đặt tiệc
+     ================================================================ */
+  .tuchon-banner{
+    display:flex; gap:16px; align-items:center; flex-wrap:wrap;
+    margin:0 0 28px; padding:18px 22px; border-radius:22px;
+    background:var(--surface-2); border:2px dashed var(--clay);
+  }
+  .tuchon-banner strong{font-family:"Baloo 2",sans-serif; font-size:1.08rem; color:var(--clay-deep); display:block;}
+  .tuchon-banner p{margin:4px 0 0; font-size:0.9rem; color:var(--ink-soft); max-width:66ch;}
+  .tuchon-banner .tc-plus{
+    display:inline-block; background:var(--marigold); color:var(--espresso);
+    font-weight:800; border-radius:8px; padding:0 7px;
+  }
+  .tuchon-banner.hot{border-style:solid; box-shadow:0 14px 32px -20px hsl(var(--shadow)/0.8);}
+
+  .mon-pick{flex:none; display:flex; align-items:center; gap:6px;}
+  .mon-btn{
+    font-family:"Be Vietnam Pro",sans-serif; font-weight:800; font-size:0.8rem;
+    border:2px solid var(--clay); background:transparent; color:var(--clay-deep);
+    border-radius:999px; padding:6px 12px; cursor:pointer; line-height:1.2; white-space:nowrap;
+    transition:background .16s ease, color .16s ease;
+  }
+  .mon-btn:hover{background:var(--clay); color:#fff8ec;}
+  .mon-step{width:30px; height:30px; padding:0; display:flex; align-items:center; justify-content:center; font-size:1.05rem;}
+  .mon-sl{
+    font-family:"JetBrains Mono",monospace; font-weight:800; font-variant-numeric:tabular-nums;
+    min-width:20px; text-align:center; color:var(--ink);
+  }
+  .menu-item.da-chon{outline:2px solid var(--jade); outline-offset:-2px;}
+  .menu-item.da-chon .price{background:var(--jade); color:#fff8ec;}
+
+  .gio-bar{
+    display:none; position:fixed; z-index:70; left:50%; transform:translateX(-50%);
+    bottom:22px; width:min(660px, calc(100% - 32px));
+    background:var(--espresso); color:#f5ebde; border-radius:22px;
+    box-shadow:0 18px 40px -18px hsl(var(--shadow)/0.85);
+    padding:12px 14px; gap:10px; align-items:center; flex-wrap:wrap;
+  }
+  .gio-bar.hien{display:flex;}
+  .gio-toggle{
+    flex:1 1 210px; display:flex; align-items:center; gap:10px; cursor:pointer;
+    background:transparent; border:0; color:#f5ebde; font-family:"Be Vietnam Pro",sans-serif;
+    font-size:0.9rem; font-weight:700; text-align:left; padding:4px 6px;
+  }
+  .gio-count{
+    background:var(--marigold); color:var(--espresso); font-weight:800;
+    border-radius:999px; min-width:28px; padding:3px 9px; text-align:center;
+    font-family:"JetBrains Mono",monospace; flex:none;
+  }
+  .gio-total{margin-left:auto; font-family:"JetBrains Mono",monospace; font-weight:800; color:var(--marigold-soft); white-space:nowrap;}
+  .gio-actions{display:flex; gap:8px; flex:none;}
+  .gio-actions .btn{padding:10px 16px; font-size:0.82rem;}
+  .gio-clear{border-color:#6b543f; color:#e7d6bd; background:transparent;}
+  .gio-clear:hover{background:rgba(245,235,222,0.12);}
+  .gio-list{
+    display:none; order:9; flex-basis:100%; max-height:38vh; overflow-y:auto;
+    border-top:1px solid #45362a; padding-top:10px;
+  }
+  .gio-list.hien{display:block;}
+  .gio-row{display:flex; align-items:center; gap:10px; font-size:0.85rem; padding:7px 4px; border-bottom:1px dashed #3a2c20;}
+  .gio-row:last-child{border-bottom:0;}
+  .gio-row .gr-ten{flex:1 1 auto; min-width:0;}
+  .gio-row .gr-tien{font-family:"JetBrains Mono",monospace; font-weight:700; color:var(--marigold-soft); white-space:nowrap;}
+  .gio-row .mon-btn{border-color:#6b543f; color:#e7d6bd;}
+  .gio-row .mon-btn:hover{background:var(--clay); color:#fff8ec; border-color:var(--clay);}
+  .gio-row .mon-sl{color:#f5ebde;}
+  .gio-note{flex-basis:100%; font-size:0.78rem; color:#bfae97; margin:0 4px;}
+
+  /* Gói tự chọn hiển thị trong form đặt tiệc nhanh */
+  .tc-huong{margin:0 0 10px; color:#cdbca6; font-size:0.85rem;}
+  .tc-btn{margin-top:4px; padding:10px 18px; font-size:0.82rem;}
+  .tc-list{list-style:none; margin:0 0 6px; padding:0; display:flex; flex-direction:column; gap:5px;}
+  .tc-list li{display:flex; gap:12px; justify-content:space-between; align-items:baseline;}
+  .tc-list .tc-tien{font-family:"JetBrains Mono",monospace; color:var(--marigold-soft); white-space:nowrap;}
+  .tc-tong{
+    display:flex; justify-content:space-between; align-items:baseline; gap:12px;
+    border-top:1px dashed rgba(245,235,222,0.35); padding-top:10px; margin-top:8px;
+    font-family:"Baloo 2",sans-serif; font-size:1.12rem; color:var(--marigold);
+  }
+  .tc-tong .tc-so{font-family:"JetBrains Mono",monospace; font-weight:800;}
+  .tc-actions{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+  .tc-actions .btn{padding:9px 16px; font-size:0.8rem;}
+  .tc-actions .tc-xoa{border-color:#6b543f; color:#e7d6bd; background:transparent;}
+  .tc-actions .tc-xoa:hover{background:rgba(245,235,222,0.12);}
+
+  @media (max-width: 720px){
+    .gio-bar{bottom:calc(84px + env(safe-area-inset-bottom, 0px)); width:calc(100% - 20px); padding:11px 12px;}
+    .gio-actions{flex:1 1 100%;}
+    .gio-actions .btn{flex:1 1 0; justify-content:center;}
+    .menu-item{flex-wrap:wrap;}
+    .mon-pick{margin-left:auto;}
+  }
