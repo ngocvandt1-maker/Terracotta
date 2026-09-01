@@ -1,0 +1,109 @@
+  <section id="dat-tiec">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Đặt tiệc buổi chiều</p>
+        <h2>Gói tiệc cho mọi dịp sum vầy</h2>
+        <p>Sinh nhật, họp mặt, tất niên — 16 mức giá từ 135.000đ đến 400.000đ/khách, mỗi mức có nhiều thực đơn set để chọn.</p>
+      </div>
+
+      <div class="capacity-strip">
+        <div class="cap-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div>Nhận tiệc từ <strong>10 khách</strong></div>
+        </div>
+        <div class="cap-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9v.01M9 13v.01M9 17v.01M15 9v.01M15 13v.01M15 17v.01"/></svg>
+          <div>Sảnh tiệc phục vụ đến <strong>~200 khách</strong></div>
+        </div>
+        <div class="cap-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92Z"/></svg>
+          <div>Gọi hotline để chốt số bàn phù hợp</div>
+        </div>
+      </div>
+
+      <div class="calc">
+        <div>
+          <h3>Tính nhanh chi phí bữa tiệc</h3>
+          <p class="calc-sub">Kéo số khách và chọn mức set — biết ngay khoảng tiền, không cần gọi hỏi giá.</p>
+          <div class="calc-field">
+            <label for="calcGuests">Số khách: <output id="calcGuestsOut" for="calcGuests">40 khách</output></label>
+            <input type="range" id="calcGuests" min="10" max="200" step="5" value="40">
+          </div>
+          <div class="calc-field">
+            <label for="calcPkg">Mức set thực đơn</label>
+            <select id="calcPkg" aria-label="Chọn mức set thực đơn để tính chi phí"></select>
+          </div>
+        </div>
+        <div class="calc-out">
+          <p class="lbl">Tổng tạm tính</p>
+          <p class="calc-total" id="calcTotal">—</p>
+          <p class="calc-per" id="calcPer"></p>
+          <a class="btn btn-primary" href="#dat-tiec-nhanh" id="calcBook">Đặt mức này</a>
+          <p class="calc-note">Chưa gồm VAT · giá hải sản theo thời giá · gọi hotline 0931.7944.88 để chốt số bàn và thực đơn cuối cùng.</p>
+        </div>
+      </div>
+
+      <div class="pkg-filter" id="pkgFilter" role="group" aria-label="Lọc mức giá set tiệc">
+        <button type="button" class="filter-btn" data-tier="am-cung">Ấm cúng · 135–185k</button>
+        <button type="button" class="filter-btn active" data-tier="sum-vay">Sum vầy · 195–265k</button>
+        <button type="button" class="filter-btn" data-tier="trang-trong">Trang trọng · 275–400k</button>
+        <button type="button" class="filter-btn" data-tier="all">Xem tất cả 16 mức</button>
+      </div>
+      <p class="pkg-count" id="pkgCount"></p>
+
+      <div class="pkg-grid" id="pkgGrid"><!-- filled by JS from PKG_DATA --></div>
+      <p class="booking-note" style="margin-top:20px; text-align:center;">Mỗi mức giá có nhiều thực đơn set khác nhau — gọi hotline để xem đầy đủ và chọn set phù hợp. Giá trên chưa gồm VAT, giá hải sản biến động theo thị trường. Khách mang đồ ăn/thức uống riêng: phụ thu 150.000đ/kg đồ tươi sống, 200.000đ/chai rượu mạnh, 30.000đ/lít rượu ngâm. Không phục vụ rượu, bia, thuốc lá cho khách dưới 18 tuổi.</p>
+
+      <div class="booking" id="dat-tiec-nhanh">
+        <div>
+          <h3>Đặt tiệc nhanh</h3>
+          <p style="color:#d9c9b3; font-size:0.95rem;">Điền thông tin bên dưới, quán sẽ liên hệ xác nhận trong thời gian sớm nhất. Hoặc gọi trực tiếp để được tư vấn ngay.</p>
+          <p class="booking-note">Hotline: <strong style="color:#f5ebde;">0931.7944.88 – 0935.199.557</strong></p>
+        </div>
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div>
+              <label for="fname">Họ và tên *</label>
+              <input id="fname" name="fname" required placeholder="Nguyễn Văn A">
+            </div>
+            <div>
+              <label for="fphone">Số điện thoại *</label>
+              <input id="fphone" name="fphone" type="tel" required placeholder="09xxxxxxxx">
+            </div>
+            <div>
+              <label for="fdate">Ngày &amp; giờ tổ chức *</label>
+              <input id="fdate" name="fdate" type="datetime-local" required>
+            </div>
+            <div>
+              <label for="fguests">Số lượng khách *</label>
+              <input id="fguests" name="fguests" type="number" min="1" required placeholder="20">
+            </div>
+            <div class="full">
+              <label for="fpackage">Chọn gói</label>
+              <select id="fpackage" name="fpackage"></select>
+              <div class="pkg-preview" id="pkgPreview"></div>
+            </div>
+            <div class="full">
+              <label for="fnote">Ghi chú thêm</label>
+              <textarea id="fnote" name="fnote" placeholder="Yêu cầu trang trí, sinh nhật, họp mặt công ty..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Gửi cho quán — quán gọi lại trong 15 phút</button>
+
+          <div id="bookingResult">
+            <div class="result-card">
+              <h4>Quán đã nhận được rồi ạ!</h4>
+              <p id="bookingCode" class="booking-code"></p>
+              <p id="bookingSummary"></p>
+              <p class="booking-promise">Quán sẽ gọi lại xác nhận trong <strong>15 phút</strong> (trong giờ mở cửa 10:00–22:00).</p>
+              <div class="result-actions">
+                <a class="btn btn-jade" href="tel:0931794488">Gọi ngay để xác nhận</a>
+                <a class="btn btn-ghost" id="zaloLink" href="https://zalo.me/0931794488" target="_blank" rel="noopener" style="border-color:var(--marigold); color:var(--marigold-soft);">Nhắn Zalo</a>
+              </div>
+              <p id="bookingHint" style="font-size:0.84rem; color:#bfae97; margin:12px 0 0;"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>

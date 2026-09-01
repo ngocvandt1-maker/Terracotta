@@ -3,32 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Đồng Gia Viên Restaurant</title>
-<meta name="description" content="Đồng Gia Viên Restaurant - nhà hàng sân vườn tại Quy Nhơn với tiểu cảnh hòn non bộ xanh mát, món gia đình đậm vị và nhận đặt tiệc sinh nhật, họp mặt, liên hoan, tân gia.">
-<link rel="preload" as="image" href="images/hero-nha-hang-len-den.jpg" fetchpriority="high">
+<title>Đồng Gia Viên Restaurant — Nhà hàng sân vườn và đặt tiệc tại Quy Nhơn</title>
+<meta name="description" content="Nhà hàng sân vườn tại Quy Nhơn với tiểu cảnh hòn non bộ xanh mát, món gia đình đậm vị và nhận đặt tiệc sinh nhật, họp mặt, liên hoan, tân gia. Có khu nhà banh cho bé.">
 <link rel="canonical" href="https://terracotta-virid.vercel.app/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#b5502e">
 <meta name="geo.placename" content="Quy Nhơn, Gia Lai">
 <meta name="geo.position" content="13.7937564;109.2187642">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%231f5c52'/%3E%3Ccircle cx='32' cy='26' r='13' fill='%23e8a230'/%3E%3Crect x='29' y='26' width='6' height='25' rx='3' fill='%23e8a230'/%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="/apple-touch-icon.jpg">
+<link rel="apple-touch-icon" href="apple-touch-icon.jpg">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Đồng Gia Viên Restaurant">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:url" content="https://terracotta-virid.vercel.app/">
-<meta property="og:title" content="Đồng Gia Viên — Nhà hàng sân vườn &amp; đặt tiệc tại Quy Nhơn">
-<meta property="og:description" content="Nhà hàng sân vườn giữa tiểu cảnh hòn non bộ xanh mát, món gia đình đậm vị quê nhà. Nhận đặt tiệc trọn gói từ 10 đến 200 khách, set từ 135.000đ/khách. Có khu nhà banh cho bé.">
+<meta property="og:title" content="Đồng Gia Viên — Nhà hàng sân vườn và đặt tiệc tại Quy Nhơn">
+<meta property="og:description" content="Nhà hàng sân vườn tại Quy Nhơn với tiểu cảnh hòn non bộ xanh mát, món gia đình đậm vị và nhận đặt tiệc sinh nhật, họp mặt, liên hoan, tân gia. Có khu nhà banh cho bé.">
 <meta property="og:image" content="https://terracotta-virid.vercel.app/og-image.jpg">
 <meta property="og:image:width" content="1113">
 <meta property="og:image:height" content="816">
 <meta property="og:image:alt" content="Nhà hàng Đồng Gia Viên lên đèn buổi tối">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Đồng Gia Viên — Nhà hàng sân vườn &amp; đặt tiệc tại Quy Nhơn">
-<meta name="twitter:description" content="Sân vườn xanh mát, món gia đình đậm vị quê nhà, nhận đặt tiệc trọn gói. Có khu nhà banh cho bé.">
+<meta name="twitter:title" content="Đồng Gia Viên — Nhà hàng sân vườn và đặt tiệc tại Quy Nhơn">
+<meta name="twitter:description" content="Nhà hàng sân vườn tại Quy Nhơn với tiểu cảnh hòn non bộ xanh mát, món gia đình đậm vị và nhận đặt tiệc sinh nhật, họp mặt, liên hoan, tân gia. Có khu nhà banh cho bé.">
 <meta name="twitter:image" content="https://terracotta-virid.vercel.app/og-image.jpg">
 
+<!-- ===== GOOGLE ANALYTICS 4 — Đồng Gia Viên ===== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BCNS68WLH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8BCNS68WLH');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="preload" as="image" href="images/hero-nha-hang-len-den.jpg" fetchpriority="high">
+<script>
+  /* Link cũ dạng trang-chu/#menu vẫn dùng được: đưa khách sang đúng trang mới */
+  (function(){
+    var map = {
+      '#home': '/', '#menu': '/thuc-don', '#dat-tiec': '/dat-tiec',
+      '#dat-tiec-nhanh': '/dat-tiec#dat-tiec-nhanh', '#gioi-thieu': '/gioi-thieu',
+      '#khoanh-khac': '/gioi-thieu#khoanh-khac', '#khu-tre-em': '/khu-tre-em',
+      '#lien-he': '/lien-he', '#cau-hoi': '/lien-he#cau-hoi'
+    };
+    var dich = map[location.hash];
+    if (dich && dich !== '/') location.replace(dich);
+  })();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -78,668 +104,21 @@
   }
 }
 </script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"Quán nhận đặt tiệc từ bao nhiêu khách?","acceptedAnswer":{"@type":"Answer","text":"Quán nhận tiệc từ 10 khách. Sảnh tiệc phục vụ được đến khoảng 200 khách. Gọi hotline 0931.7944.88 để quán tư vấn số bàn phù hợp."}},
-    {"@type":"Question","name":"Set tiệc có bao nhiêu mức giá, mỗi set gồm những gì?","acceptedAnswer":{"@type":"Answer","text":"Hiện có 36 thực đơn set ứng với 16 mức giá, từ 135.000đ đến 400.000đ mỗi khách. Mỗi set gồm khai vị, món mặn, lẩu hoặc canh, cơm và tráng miệng."}},
-    {"@type":"Question","name":"Giá trên đã gồm VAT chưa?","acceptedAnswer":{"@type":"Answer","text":"Giá niêm yết chưa gồm VAT. Các món hải sản tính theo thời giá thị trường nên có thể thay đổi."}},
-    {"@type":"Question","name":"Mang bánh kem, rượu bia từ ngoài vào được không?","acceptedAnswer":{"@type":"Answer","text":"Được, quán có phụ thu 150.000đ mỗi kg đồ tươi sống, 200.000đ mỗi chai rượu mạnh, 30.000đ mỗi lít rượu ngâm. Quán không phục vụ rượu, bia, thuốc lá cho khách dưới 18 tuổi."}},
-    {"@type":"Question","name":"Đi cùng trẻ nhỏ thì bé có chỗ chơi không?","acceptedAnswer":{"@type":"Answer","text":"Có. Quán có khu nhà banh dành cho trẻ em ngay trong khuôn viên, cùng không gian sân vườn rộng rãi."}},
-    {"@type":"Question","name":"Quán mở cửa giờ nào và ở đâu?","acceptedAnswer":{"@type":"Answer","text":"Quán mở cửa 10:00 – 22:00 tất cả các ngày trong tuần, tại Số 1 Trần Văn Dũng (qua cầu 2 Hà Thanh), P. Quy Nhơn, Tỉnh Gia Lai."}},
-    {"@type":"Question","name":"Đặt tiệc bằng cách nào là nhanh nhất?","acceptedAnswer":{"@type":"Answer","text":"Điền form Đặt tiệc nhanh trên website, hoặc gọi 0931.7944.88 – 0935.199.557. Quán cũng nhận đặt qua Zalo và Facebook."}}
-  ]
-}
-</script>
-
-<!-- ===== GOOGLE ANALYTICS 4 — Đồng Gia Viên ===== -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BCNS68WLH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8BCNS68WLH');
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #f5ebde;
-    --bg-deep: #ecdcc4;
-    --surface: #fffbf4;
-    --surface-2: #f5e2cb;
-    --ink: #2e2019;
-    --ink-soft: #6e5b4c;
-    --line: #e6d4be;
-    --clay: #b5502e;
-    --clay-deep: #8f3c21;
-    --marigold: #e8a230;
-    --marigold-soft: #f3c268;
-    --jade: #1f5c52;
-    --espresso: #241811;
-    --shadow: 20 45% 8%;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg: #1c140d;
-      --bg-deep: #150f0a;
-      --surface: #241a12;
-      --surface-2: #2c2016;
-      --ink: #f5ebde;
-      --ink-soft: #cbb9a4;
-      --line: #3c2d1e;
-      --clay: #d9713f;
-      --clay-deep: #b5502e;
-      --marigold: #f3c268;
-      --marigold-soft: #f8d896;
-      --jade: #3f9c8c;
-      --espresso: #120c08;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg: #1c140d;
-    --bg-deep: #150f0a;
-    --surface: #241a12;
-    --surface-2: #2c2016;
-    --ink: #f5ebde;
-    --ink-soft: #cbb9a4;
-    --line: #3c2d1e;
-    --clay: #d9713f;
-    --clay-deep: #b5502e;
-    --marigold: #f3c268;
-    --marigold-soft: #f8d896;
-    --jade: #3f9c8c;
-    --espresso: #120c08;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth; scroll-padding-top:96px;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:"Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    position:relative;
-  }
-  body::before{
-    content:"";
-    position:fixed; inset:0; z-index:1; pointer-events:none;
-    opacity:0.05; mix-blend-mode:multiply;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
-  }
-
-  img,svg{max-width:100%; display:block;}
-  a{color:inherit;}
-  .wrap{max-width:1160px; margin:0 auto; padding:0 24px; position:relative; z-index:2;}
-  h1,h2,h3,h4{
-    font-family:"Baloo 2", "Be Vietnam Pro", sans-serif;
-    font-weight:700;
-    line-height:1.12;
-    margin:0;
-    text-wrap:balance;
-    color:var(--clay-deep);
-  }
-  p{margin:0;}
-  .eyebrow{
-    font-family:"Be Vietnam Pro", sans-serif;
-    font-weight:800;
-    font-size:0.78rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--jade);
-  }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:15px 28px;
-    border-radius:999px;
-    font-weight:800;
-    font-size:0.98rem;
-    text-decoration:none;
-    border:2px solid transparent;
-    cursor:pointer;
-    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
-    font-family:"Be Vietnam Pro", sans-serif;
-  }
-  .btn:active{transform:translateY(1px) scale(0.98);}
-  .btn-primary{background:var(--marigold); color:var(--espresso); box-shadow:0 10px 24px -10px hsl(var(--shadow)/0.55);}
-  .btn-primary:hover{background:var(--marigold-soft); transform:translateY(-2px);}
-  .btn-ghost{background:transparent; border-color:var(--clay); color:var(--clay-deep);}
-  .btn-ghost:hover{background:var(--surface-2);}
-  .btn-jade{background:var(--jade); color:#fff8ec;}
-  .btn-jade:hover{background:#296e63;}
-  :focus-visible{outline:3px solid var(--marigold); outline-offset:2px;}
-
-  /* ---------- Header ---------- */
-  header{
-    position:sticky; top:0; z-index:50;
-    background:color-mix(in srgb, var(--bg) 90%, transparent);
-    backdrop-filter:blur(10px);
-    border-bottom:2px solid var(--line);
-  }
-  .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0;}
-  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; min-width:0;}
-  .brand-mark{width:42px; height:42px; flex:none; border-radius:38% 62% 55% 45% / 45% 55% 45% 55%; object-fit:cover; background:#fff; border:2px solid var(--marigold);}
-  .brand-text{font-family:"Baloo 2", sans-serif; font-weight:700; font-size:1.2rem; color:var(--clay-deep);}
-  .brand-text span{display:block; font-family:"Be Vietnam Pro",sans-serif; font-weight:600; font-size:0.6rem; letter-spacing:0.16em; color:var(--ink-soft); text-transform:uppercase;}
-  nav.links{display:flex; align-items:center; gap:6px;}
-  nav.links a{
-    text-decoration:none; font-weight:700; font-size:0.92rem; color:var(--ink-soft);
-    padding:8px 16px; border-radius:999px;
-  }
-  nav.links a:hover{color:var(--clay-deep); background:var(--surface-2);}
-  .nav-actions{display:flex; align-items:center; gap:10px;}
-  .call-chip{
-    display:flex; align-items:center; gap:8px; text-decoration:none;
-    font-weight:800; font-size:0.88rem; color:#fff8ec;
-    padding:10px 18px; background:var(--clay); border-radius:999px;
-    flex:none; white-space:nowrap;
-  }
-  .call-chip:hover{background:var(--clay-deep);}
-  .call-chip svg{flex:0 0 15px; width:15px; height:15px; min-width:15px;}
-  .chip-short{display:none;}
-  .zalo-chip{background:var(--jade);}
-  .zalo-chip:hover{background:#296e63;}
-  .burger{display:none; background:none; border:none; cursor:pointer; padding:8px;}
-  .burger span{display:block; width:24px; height:3px; border-radius:3px; background:var(--clay-deep); margin:5px 0; transition:.2s;}
-
-  /* ---------- Hero ---------- */
-  .hero{position:relative; overflow:hidden; padding:56px 0 72px;}
-  .hero-grid{display:grid; grid-template-columns:1fr 0.92fr; gap:40px; align-items:center;}
-  .hero h1{font-size:clamp(2.5rem, 5.2vw, 3.9rem); letter-spacing:-0.01em;}
-  .hero h1 em{font-style:normal; color:var(--clay);}
-  .hero-desc{margin-top:16px; font-size:1.06rem; color:var(--ink-soft); max-width:50ch;}
-  .hero-cta{display:flex; gap:14px; margin-top:30px; flex-wrap:wrap;}
-  .info-strip{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap;}
-  .info-item{
-    display:flex; align-items:center; gap:10px; font-size:0.85rem; color:var(--ink-soft);
-    background:var(--surface); border:1.5px solid var(--line); padding:10px 16px; border-radius:999px;
-  }
-  .info-item svg{width:18px; height:18px; color:var(--clay); flex:none;}
-  .info-item strong{color:var(--ink); font-weight:800;}
-
-  .hero-art-wrap{position:relative;}
-  .hero-art{
-    position:relative; aspect-ratio:1.3/1; overflow:hidden;
-    border-radius:62% 38% 55% 45% / 55% 48% 52% 45%;
-    box-shadow:0 40px 70px -30px hsl(var(--shadow)/0.6);
-    border:5px solid var(--surface);
-  }
-  .hero-art img{width:100%; height:100%; object-fit:cover; display:block;}
-  .hero-badge{
-    position:absolute; bottom:-6px; left:-18px; z-index:3;
-    background:var(--espresso); color:#fff8ec; padding:18px 24px;
-    border-radius:26px 26px 26px 6px;
-    box-shadow:0 20px 40px -18px hsl(var(--shadow)/0.7);
-    max-width:220px; transform:rotate(-3deg);
-  }
-  .hero-badge strong{display:block; font-family:"Baloo 2",sans-serif; font-size:1.5rem; color:var(--marigold-soft);}
-  .hero-badge span{font-size:0.78rem; color:#e7dcc9; font-weight:600;}
-  .hero-dot{
-    position:absolute; top:-22px; right:14px; width:78px; height:78px; border-radius:50%;
-    background:var(--jade); display:flex; align-items:center; justify-content:center;
-    color:#eafff9; font-family:"Baloo 2",sans-serif; font-weight:700; font-size:0.72rem; text-align:center;
-    line-height:1.15; transform:rotate(8deg); box-shadow:0 14px 26px -12px hsl(var(--shadow)/0.6);
-  }
-
-  /* ---------- Section shell ---------- */
-  section{padding:80px 0; position:relative;}
-  .section-head{max-width:640px; margin:0 auto 44px; text-align:center;}
-  .section-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:8px;}
-  .section-head p{margin-top:12px; color:var(--ink-soft); font-size:1.02rem;}
-  .blob-divider{height:60px; width:100%; overflow:hidden; line-height:0;}
-  .blob-divider svg{width:100%; height:100%; display:block;}
-
-  /* ---------- Giới thiệu ---------- */
-  #gioi-thieu{background:var(--surface);}
-  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
-  .about-copy p{color:var(--ink-soft); font-size:1.04rem;}
-  .feature-list{list-style:none; margin:26px 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-  .feature-list li{
-    display:flex; gap:12px; align-items:flex-start;
-    background:var(--surface-2); border:1.5px solid var(--line);
-    border-radius:20px; padding:16px;
-  }
-  .feature-list .ico{
-    width:36px; height:36px; border-radius:50%; background:var(--marigold); flex:none;
-    display:flex; align-items:center; justify-content:center; color:var(--espresso);
-  }
-  .feature-list .ico svg{width:19px; height:19px;}
-  .feature-list h4{font-family:"Be Vietnam Pro",sans-serif; font-size:0.94rem; font-weight:800; color:var(--ink);}
-  .feature-list small{color:var(--ink-soft); font-size:0.82rem;}
-
-  /* ---------- Bento Gallery ---------- */
-  #khoanh-khac{background:var(--bg);}
-  .bento-grid{
-    display:grid; grid-template-columns:repeat(4, 1fr); grid-auto-rows:150px; gap:16px;
-  }
-  .bento-item{
-    position:relative; border-radius:28px; overflow:hidden; grid-column:span 2; grid-row:span 2;
-    box-shadow:0 16px 32px -22px hsl(var(--shadow)/0.5);
-  }
-  .bento-item.big{grid-column:span 2; grid-row:span 3;}
-  .bento-item.wide{grid-column:span 2; grid-row:span 2;}
-  .bento-item img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease;}
-  .bento-item:hover img{transform:scale(1.07);}
-  .bento-cap{
-    position:absolute; left:12px; bottom:12px; padding:9px 18px;
-    background:var(--espresso); color:#fff8ec; border-radius:999px;
-    font-size:0.8rem; font-weight:800; box-shadow:0 6px 18px -6px rgba(0,0,0,0.6);
-    border:1.5px solid rgba(255,255,255,0.12);
-  }
-
-  /* ---------- Thực đơn ---------- */
-  .reel-frame{
-    position:relative; aspect-ratio:16/8; max-width:900px; margin:0 auto 40px;
-    border-radius:38% 62% 55% 45% / 45% 40% 55% 50%; overflow:hidden;
-    box-shadow:0 30px 60px -24px hsl(var(--shadow)/0.6); border:5px solid var(--surface);
-  }
-  .reel-slides{position:absolute; inset:0;}
-  .reel-slide{
-    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
-    opacity:0; transition:opacity 1.1s ease;
-  }
-  .reel-slide.active{opacity:1;}
-  .reel-overlay{
-    position:absolute; inset:0; pointer-events:none;
-    background:linear-gradient(0deg, rgba(36,24,17,0.75) 0%, transparent 45%);
-  }
-  .reel-caption{
-    position:absolute; left:26px; bottom:20px; color:#fff8ec; font-weight:800;
-    font-family:"Baloo 2",sans-serif; font-size:1.1rem; text-shadow:0 2px 10px rgba(0,0,0,0.5);
-  }
-  .reel-dots{position:absolute; right:22px; bottom:26px; display:flex; gap:7px;}
-  .reel-dot{width:7px; height:7px; border-radius:50%; background:rgba(255,248,236,0.4); transition:background .2s;}
-  .reel-dot.active{background:var(--marigold);}
-  .menu-tabs{display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:40px;}
-  .tab-btn{
-    font-family:"Be Vietnam Pro",sans-serif; font-weight:800; font-size:0.88rem;
-    padding:12px 22px; border-radius:999px; border:2px solid var(--line);
-    background:var(--surface); cursor:pointer; color:var(--ink-soft);
-  }
-  .tab-btn[aria-selected="true"]{background:var(--clay); border-color:var(--clay); color:#fff8ec;}
-  .menu-panel{display:none;}
-  .menu-panel.active{display:block; animation:fade .35s ease;}
-  @keyframes fade{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;}}
-  .menu-list{display:grid; grid-template-columns:1fr 1fr; gap:10px 20px;}
-  .menu-item{
-    display:flex; justify-content:space-between; align-items:center; gap:14px;
-    padding:14px 18px; border-radius:16px;
-    background:var(--surface);
-  }
-  .menu-item:nth-child(even){background:var(--surface-2);}
-  .menu-item .name{font-weight:700; font-size:0.98rem;}
-  .menu-item .desc{color:var(--ink-soft); font-size:0.83rem; margin-top:2px;}
-  .menu-item .price{
-    font-family:"JetBrains Mono", monospace; font-weight:800; font-variant-numeric:tabular-nums;
-    color:var(--espresso); white-space:nowrap; font-size:0.85rem;
-    background:var(--marigold); padding:6px 12px; border-radius:999px; flex:none;
-  }
-  .menu-note{margin-top:18px; font-size:0.85rem; color:var(--ink-soft); font-style:italic; line-height:1.6;}
-  .menu-cat{margin-bottom:30px;}
-  .menu-cat h4{font-family:"Baloo 2",sans-serif; font-size:1.05rem; padding-bottom:8px; border-bottom:2px dashed var(--line); margin-bottom:10px; color:var(--clay-deep);}
-
-  .set-teaser{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:16px; margin-top:32px;}
-  .set-teaser img{width:100%; height:190px; object-fit:cover; border-radius:26px;}
-  .set-teaser > *:first-child{border-radius:38% 62% 55% 45% / 50% 45% 55% 50%;}
-  .set-cta{margin-top:32px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:14px;}
-
-  /* ---------- Đặt tiệc ---------- */
-  #dat-tiec{background:var(--surface);}
-  .capacity-strip{
-    display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin:0 auto 40px; max-width:760px;
-  }
-  .capacity-strip .cap-item{
-    display:flex; align-items:center; gap:10px; font-size:0.88rem; color:var(--ink-soft);
-    background:var(--surface-2); border:1.5px solid var(--line); padding:12px 18px; border-radius:999px;
-  }
-  .capacity-strip svg{width:18px; height:18px; color:var(--clay); flex:none;}
-  .capacity-strip strong{color:var(--ink);}
-  .pkg-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
-  .pkg-card{
-    background:var(--bg); border:2px solid var(--line); border-radius:30px;
-    padding:30px 24px; display:flex; flex-direction:column; gap:16px;
-    position:relative;
-  }
-  .pkg-card.featured{border-color:var(--marigold); background:var(--surface-2); box-shadow:0 24px 44px -26px hsl(var(--shadow)/0.6);}
-  .pkg-card.featured::before{
-    content:"PHỔ BIẾN NHẤT"; position:absolute; top:-14px; left:24px;
-    background:var(--marigold); color:var(--espresso); font-size:0.66rem; font-weight:800;
-    letter-spacing:0.06em; padding:6px 14px; border-radius:999px;
-  }
-  .pkg-name{font-family:"Baloo 2",sans-serif; font-size:1.35rem; color:var(--clay-deep); font-weight:700;}
-  .pkg-price{font-family:"JetBrains Mono",monospace; font-size:1.6rem; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums;}
-  .pkg-price sub{font-family:"Be Vietnam Pro",sans-serif; font-size:0.78rem; color:var(--ink-soft); font-weight:600;}
-  .pkg-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px;}
-  .pkg-list li{display:flex; gap:9px; font-size:0.88rem; color:var(--ink-soft);}
-  .pkg-list svg{width:16px; height:16px; color:var(--jade); flex:none; margin-top:3px;}
-  .pkg-book{margin-top:auto; align-self:flex-start; padding:11px 22px; font-size:0.9rem;}
-
-  .pkg-table-scroll{overflow-x:auto; border-radius:24px; border:2px solid var(--line);}
-  .pkg-table{width:100%; border-collapse:collapse; min-width:560px; background:var(--bg);}
-  .pkg-table th{
-    text-align:left; font-family:"Be Vietnam Pro",sans-serif; font-weight:800; font-size:0.76rem;
-    letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-soft);
-    padding:14px 20px; border-bottom:2px solid var(--line); white-space:nowrap;
-  }
-  .pkg-table td{padding:13px 20px; border-bottom:1px solid var(--line); font-size:0.91rem; color:var(--ink);}
-  .pkg-table tbody tr:last-child td{border-bottom:none;}
-  .pkg-table tbody tr:nth-child(even){background:var(--surface-2);}
-  .pkg-table td:first-child{
-    font-family:"JetBrains Mono",monospace; font-weight:800; color:var(--espresso);
-    font-variant-numeric:tabular-nums; white-space:nowrap;
-    background:var(--marigold-soft) !important;
-  }
-
-  .booking{
-    margin-top:60px; background:var(--espresso); color:#f5ebde; border-radius:36px;
-    padding:44px; display:grid; grid-template-columns:0.9fr 1.1fr; gap:44px;
-  }
-  .booking h3{font-size:1.55rem; margin-bottom:12px; color:var(--marigold-soft);}
-  .booking-note{color:#d9c9b3; font-size:0.94rem; margin-top:14px;}
-  .pkg-preview{margin-top:8px; padding:12px 16px; background:rgba(255,255,255,0.06); border:2px dashed rgba(245,235,222,0.3); border-radius:14px; font-size:0.85rem; color:#e7dcc9; line-height:1.6;}
-  .pkg-preview strong{color:var(--marigold-soft); display:block; margin-bottom:6px;}
-  .pkg-preview-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:5px;}
-  .pkg-preview-list li{display:flex; gap:8px; align-items:flex-start;}
-  .pkg-preview-list li::before{content:"•"; color:var(--marigold); flex:none; line-height:1.5;}
-  .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-  .form-grid .full{grid-column:1/-1;}
-  label{display:block; font-size:0.8rem; font-weight:700; color:#f5ebde; margin-bottom:6px;}
-  input,select,textarea{
-    width:100%; padding:13px 15px; border-radius:14px; border:2px solid #45362a;
-    background:#2c2016; color:#f5ebde; font-family:"Be Vietnam Pro",sans-serif; font-size:0.95rem;
-  }
-  input::placeholder, textarea::placeholder{color:#8a7862;}
-  input:focus,select:focus,textarea:focus{border-color:var(--marigold); outline:none;}
-  textarea{resize:vertical; min-height:80px;}
-  .form-submit{margin-top:6px;}
-  #bookingResult{margin-top:20px; display:none;}
-  #bookingResult.show{display:block;}
-  .result-card{background:#2c2016; border:2px solid var(--marigold); border-radius:20px; padding:20px;}
-  .result-card h4{font-family:"Baloo 2",sans-serif; color:var(--marigold-soft); margin-bottom:8px;}
-  .result-card p{font-size:0.9rem; color:#d9c9b3; margin-bottom:14px; white-space:pre-line;}
-  .result-card .booking-code{
-    font-family:"Baloo 2",sans-serif; font-size:1.05rem; font-weight:700;
-    color:var(--marigold); letter-spacing:0.06em; margin-bottom:8px;
-  }
-  .result-card .booking-promise{color:#e7d6bd; font-size:0.88rem;}
-  .result-card .booking-promise strong{color:var(--marigold-soft);}
-  .result-actions{display:flex; gap:10px; flex-wrap:wrap;}
-
-  /* ---------- Liên hệ ---------- */
-  #lien-he{background:var(--bg);}
-  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:stretch;}
-  .contact-card{
-    background:var(--surface); border:2px solid var(--line); border-radius:30px; padding:34px;
-    display:flex; flex-direction:column; gap:20px;
-  }
-  .contact-row{display:flex; gap:14px; align-items:flex-start;}
-  .contact-row .ico{
-    width:38px; height:38px; border-radius:50%; background:var(--surface-2); flex:none;
-    display:flex; align-items:center; justify-content:center; color:var(--clay);
-  }
-  .contact-row .ico svg{width:19px; height:19px;}
-  .contact-row strong{display:block; font-size:0.98rem;}
-  .contact-row span{color:var(--ink-soft); font-size:0.92rem;}
-  .contact-row a{text-decoration:underline; text-underline-offset:2px;}
-  .map-frame{border-radius:30px; overflow:hidden; border:2px solid var(--line); min-height:340px; position:relative; background:var(--surface-2);}
-  .map-frame iframe{width:100%; height:100%; min-height:340px; border:0;}
-  .map-fallback{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; text-align:center; padding:24px;}
-
-  footer{background:var(--espresso); color:#f5ebde; padding:46px 0 24px;}
-  .footer-main{display:grid; grid-template-columns:1fr 1.25fr 0.85fr; gap:40px; align-items:start;}
-  .footer-col{display:flex; flex-direction:column; gap:12px;}
-  .footer-logo{width:56px; height:56px; border-radius:50%; object-fit:cover; background:#fff; border:2px solid var(--marigold);}
-  .footer-tagline{font-size:0.85rem; color:#cfc2ae; line-height:1.65; max-width:34ch;}
-  .footer-company{text-align:center; align-items:center; gap:9px;}
-  .footer-company-name{font-family:"Baloo 2",sans-serif; font-weight:700; font-size:1.45rem; color:var(--marigold-soft); line-height:1.1;}
-  .footer-company-legal{font-family:"Baloo 2",sans-serif; font-weight:600; font-size:1.02rem; color:#f5ebde; line-height:1.35; letter-spacing:0.01em;}
-  .footer-mst{font-size:0.85rem; color:#cfc2ae;}
-  .footer-mst strong{color:#f5ebde; font-family:"JetBrains Mono",monospace; letter-spacing:0.02em;}
-  .footer-line{display:flex; gap:9px; align-items:flex-start; justify-content:center; font-size:0.86rem; color:#cfc2ae; line-height:1.6;}
-  .footer-line svg{width:17px; height:17px; color:var(--marigold); flex:none; margin-top:3px;}
-  .footer-line a{color:#f5ebde; text-decoration:none;}
-  .footer-line a:hover{color:var(--marigold-soft);}
-  .footer-connect{align-items:flex-end; text-align:right;}
-  .footer-connect-label{font-size:0.76rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#cfc2ae;}
-  footer .brand-text, footer .brand-text span{color:#f5ebde;}
-  footer a.back-top{color:#f5ebde; text-decoration:none; font-weight:700; font-size:0.88rem; opacity:0.85; margin-top:6px;}
-  footer a.back-top:hover{color:var(--marigold-soft); opacity:1;}
-  .footer-social{display:flex; gap:12px;}
-  .footer-social a{
-    width:38px; height:38px; border-radius:50%; border:2px solid rgba(245,235,222,0.35);
-    display:flex; align-items:center; justify-content:center;
-  }
-  .footer-social a:hover{background:var(--marigold); border-color:var(--marigold); color:var(--espresso);}
-  .footer-social svg{width:17px; height:17px;}
-  footer .fine{width:100%; margin-top:34px; padding-top:16px; border-top:1px solid rgba(245,235,222,0.15); font-size:0.78rem; opacity:0.7; text-align:center;}
-
-  /* ---------- Cột liên hệ nổi bên phải ---------- */
-  .float-contact{
-    position:fixed; right:20px; bottom:22px; z-index:60;
-    display:flex; flex-direction:column; gap:13px;
-  }
-  .fc-btn{
-    position:relative; width:50px; height:50px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    color:#fff; text-decoration:none;
-    box-shadow:0 8px 20px -6px hsl(var(--shadow)/0.55);
-    transition:transform .18s ease, box-shadow .18s ease;
-  }
-  .fc-btn svg{width:23px; height:23px; position:relative; z-index:2;}
-  .fc-btn:hover{transform:scale(1.1);}
-  .fc-face{background:#1877f2;}
-  .fc-zalo{background:#0068ff;}
-  .fc-chat{background:var(--marigold); color:var(--espresso);}
-  .fc-call{background:var(--clay); display:none;}
-  .fc-btn::before{
-    content:""; position:absolute; inset:0; border-radius:50%;
-    background:inherit; opacity:0.55; animation:fcPulse 2s ease-out infinite;
-  }
-  .fc-chat::before{background:var(--marigold);}
-  @keyframes fcPulse{
-    0%{transform:scale(1); opacity:0.5;}
-    70%{transform:scale(1.55); opacity:0;}
-    100%{transform:scale(1.55); opacity:0;}
-  }
-  .fc-label{
-    position:absolute; right:60px; top:50%; transform:translateY(-50%);
-    background:var(--espresso); color:#fff8ec; font-size:0.78rem; font-weight:700;
-    padding:7px 13px; border-radius:999px; white-space:nowrap;
-    opacity:0; pointer-events:none; transition:opacity .18s ease;
-    font-family:"Be Vietnam Pro",sans-serif;
-  }
-  .fc-btn:hover .fc-label{opacity:1;}
-  @media (prefers-reduced-motion: reduce){
-    .fc-btn::before{animation:none; opacity:0;}
-  }
-  @media (max-width: 720px){
-    /* Thanh liên hệ dính đáy màn hình - không còn đè lên chữ */
-    body{padding-bottom:76px;}
-    .float-contact{
-      right:0; left:0; bottom:0; flex-direction:row; gap:8px;
-      background:var(--surface); border-top:2px solid var(--line);
-      padding:9px 12px calc(9px + env(safe-area-inset-bottom, 0px));
-      box-shadow:0 -10px 26px -16px hsl(var(--shadow)/0.6);
-    }
-    .fc-call{display:flex; flex:1.9 1 0;}
-    .fc-btn{flex:1 1 0; width:auto; height:46px; border-radius:14px; gap:7px; box-shadow:none;}
-    .fc-btn svg{width:19px; height:19px; flex:none;}
-    .fc-btn::before{display:none;}
-    .fc-label{
-      display:none;
-      position:static; transform:none; opacity:1; background:none; pointer-events:auto;
-      padding:0; color:inherit; font-weight:800; font-size:0.84rem; white-space:nowrap;
-    }
-    .fc-call .fc-label{display:inline;}
-  }
-
-  /* ---------- Máy tính chi phí tiệc ---------- */
-  .calc{
-    background:var(--espresso); color:#f5ebde; border-radius:30px;
-    padding:30px 32px; margin:28px 0 30px;
-    display:grid; grid-template-columns:1.1fr 0.9fr; gap:30px; align-items:center;
-  }
-  .calc h3{color:var(--marigold-soft); font-size:1.5rem;}
-  .calc-sub{font-size:0.93rem; color:#d9c9b3; margin-top:6px;}
-  .calc-field{margin-top:18px;}
-  .calc-field label{display:block; font-size:0.86rem; font-weight:700; color:#d9c9b3; margin-bottom:8px;}
-  .calc-field output{color:var(--marigold); font-family:"JetBrains Mono",monospace; font-weight:700;}
-  .calc input[type=range]{width:100%; accent-color:var(--marigold); height:26px;}
-  .calc select{
-    width:100%; padding:12px 14px; border-radius:14px; border:2px solid #47372a;
-    background:#2c2016; color:#f5ebde; font-family:inherit; font-size:0.98rem; font-weight:600;
-  }
-  .calc-out{
-    background:#2c2016; border:2px solid var(--marigold); border-radius:22px;
-    padding:22px; text-align:center;
-  }
-  .calc-out .lbl{font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:#d9c9b3; font-weight:800;}
-  .calc-total{
-    font-family:"Baloo 2",sans-serif; font-weight:800; font-size:2.05rem;
-    color:var(--marigold); line-height:1.15; margin:6px 0 4px; word-break:break-word;
-  }
-  .calc-per{font-size:0.88rem; color:#d9c9b3;}
-  .calc-out .btn{margin-top:16px; width:100%; justify-content:center;}
-  .calc-note{font-size:0.79rem; color:#bfae97; margin-top:12px; line-height:1.55;}
-
-  /* ---------- Lọc mức giá set tiệc ---------- */
-  .pkg-filter{display:flex; flex-wrap:wrap; gap:9px; justify-content:center; margin:0 0 24px;}
-  .filter-btn{
-    font-family:inherit; font-weight:700; font-size:0.9rem; cursor:pointer;
-    padding:10px 18px; border-radius:999px; border:2px solid var(--line);
-    background:var(--surface); color:var(--ink-soft); transition:.15s ease;
-  }
-  .filter-btn:hover{border-color:var(--clay); color:var(--clay-deep);}
-  .filter-btn.active{background:var(--clay); border-color:var(--clay); color:#fff8ec;}
-  .pkg-count{text-align:center; font-size:0.88rem; color:var(--ink-soft); margin-bottom:18px;}
-
-  /* ---------- Khu trẻ em ---------- */
-  .kid-grid{display:grid; grid-template-columns:1fr 0.95fr; gap:44px; align-items:center;}
-  .kid-lead{margin-top:16px; font-size:1.06rem; color:var(--ink-soft);}
-  .kid-photos{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  .kid-photos img{
-    width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; border-radius:30px;
-    box-shadow:0 24px 44px -28px hsl(var(--shadow)/0.6); border:4px solid var(--surface);
-  }
-  .kid-photos img:nth-child(2){margin-top:30px;}
-  .kid-cta{display:flex; gap:14px; flex-wrap:wrap; margin-top:26px;}
-  .kid-copy .feature-list{grid-template-columns:1fr;}
-
-  /* ---------- Câu hỏi thường gặp ---------- */
-  .faq-list{max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:12px;}
-  .faq-item{
-    background:var(--surface); border:2px solid var(--line); border-radius:20px;
-    padding:2px 22px; transition:border-color .15s ease;
-  }
-  .faq-item[open]{border-color:var(--marigold);}
-  .faq-item summary{
-    cursor:pointer; list-style:none; padding:17px 0; font-weight:700;
-    font-size:1.02rem; color:var(--clay-deep); display:flex; gap:14px; align-items:flex-start;
-  }
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item summary::after{
-    content:"+"; margin-left:auto; font-size:1.5rem; line-height:1; color:var(--clay); flex:none;
-  }
-  .faq-item[open] summary::after{content:"−";}
-  .faq-item p{padding:0 0 18px; color:var(--ink-soft); font-size:0.95rem;}
-
-  @media (max-width: 900px){
-    .calc{grid-template-columns:1fr; padding:26px 22px; gap:22px;}
-    .kid-grid{grid-template-columns:1fr; gap:30px;}
-    .kid-photos img:nth-child(2){margin-top:0;}
-  }
-  @media (max-width: 720px){
-    /* Danh sách điểm mạnh: 1 cột cho khỏi bóp chữ */
-    .feature-list{grid-template-columns:1fr;}
-    .kid-photos{grid-template-columns:1fr;}
-    /* Hàng lọc giá: cuộn ngang gọn một dòng thay vì xuống 4 dòng */
-    .pkg-filter{
-      flex-wrap:nowrap; overflow-x:auto; justify-content:flex-start;
-      padding-bottom:8px; scrollbar-width:none;
-    }
-    .pkg-filter::-webkit-scrollbar{display:none;}
-    .filter-btn{flex:none; font-size:0.85rem; padding:9px 14px;}
-  }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 900px){
-    .hero-grid{grid-template-columns:1fr;}
-    .hero-art-wrap{order:-1; max-width:320px; margin:0 auto 30px;}
-    .about-grid{grid-template-columns:1fr;}
-    .pkg-grid{grid-template-columns:1fr;}
-    .booking{grid-template-columns:1fr; padding:30px 22px;}
-    .contact-grid{grid-template-columns:1fr;}
-    .menu-list{grid-template-columns:1fr;}
-    .set-teaser{grid-template-columns:1fr 1fr;}
-    .bento-grid{grid-template-columns:repeat(2,1fr); grid-auto-rows:160px;}
-    .bento-item, .bento-item.wide{grid-column:span 1; grid-row:span 2;}
-    .bento-item.big{grid-column:span 2; grid-row:span 2;}
-    .footer-main{grid-template-columns:1fr 1fr; gap:32px;}
-    .footer-company{grid-column:1/-1; order:-1;}
-  }
-  @media (max-width: 720px){
-    nav.links{
-      position:absolute; top:calc(100% + 22px); left:16px; right:16px; background:var(--surface);
-      border:2px solid var(--line); border-radius:24px; padding:14px;
-      flex-direction:column; align-items:stretch; gap:4px;
-      box-shadow:0 20px 40px -20px hsl(var(--shadow)/0.5);
-      transform:translateY(-12px); opacity:0; pointer-events:none; transition:.2s ease;
-    }
-    nav.links.open{transform:none; opacity:1; pointer-events:auto;}
-    nav.links a{padding:12px 14px;}
-    .call-chip .chip-long{display:none;}
-    .call-chip .chip-short{display:inline;}
-    .nav-actions{gap:7px;}
-    .call-chip{padding:10px 14px;}
-    .brand-text{font-size:1rem;}
-    .brand-mark{width:36px; height:36px;}
-    .hero{padding:26px 0 46px;}
-    .hero-art-wrap{order:0; max-width:none; margin:26px auto 0;}
-    .hero h1{font-size:clamp(2rem, 8.4vw, 2.6rem);}
-    .hero-desc{font-size:1rem; margin-top:12px;}
-    .hero-cta{margin-top:20px;}
-    .hero-cta .btn{flex:1 1 auto; justify-content:center;}
-    .burger{display:block;}
-    section{padding:56px 0;}
-    .form-grid{grid-template-columns:1fr;}
-    .set-teaser{grid-template-columns:1fr;}
-    .hero-badge{position:static; transform:none; margin-top:16px; max-width:none;}
-    .hero-dot{display:none;}
-    .footer-main{grid-template-columns:1fr; gap:30px; text-align:center;}
-    .footer-col{align-items:center; text-align:center;}
-    .footer-connect{align-items:center; text-align:center;}
-    .footer-tagline{max-width:none;}
-  }
-</style>
 </head>
 <body>
 
-<header>
+<header id="top">
   <div class="wrap nav">
-    <a class="brand" href="#home">
+    <a class="brand" href="/">
       <img class="brand-mark" src="images/logo.jpg" width="206" height="206" decoding="async" alt="Logo Đồng Gia Viên">
       <span class="brand-text">Đồng Gia Viên Restaurant</span>
     </a>
     <nav class="links" id="navLinks">
-      <a href="#home">Trang chủ</a>
-      <a href="#menu">Thực đơn</a>
-      <a href="#dat-tiec">Đặt tiệc</a>
-      <a href="#gioi-thieu">Giới thiệu</a>
-      <a href="#lien-he">Liên hệ</a>
+      <a href="/">Trang chủ</a>
+      <a href="/thuc-don">Thực đơn</a>
+      <a href="/dat-tiec">Đặt tiệc</a>
+      <a href="/gioi-thieu">Giới thiệu</a>
+      <a href="/lien-he">Liên hệ</a>
     </nav>
     <div class="nav-actions">
       <a class="call-chip" href="tel:0931794488" aria-label="Gọi 0931.7944.88" data-track="call-header">
@@ -759,7 +138,6 @@
 </header>
 
 <main>
-  <!-- HERO -->
   <section class="hero" id="home">
     <div class="wrap hero-grid">
       <div>
@@ -767,8 +145,8 @@
         <h1>Bữa tiệc sum vầy trọn vẹn tại <em>Đồng Gia Viên</em></h1>
         <p class="hero-desc">Nhà hàng sân vườn rộng rãi giữa tiểu cảnh hòn non bộ xanh mát, phục vụ món gia đình đậm vị quê nhà. Nhận đặt tiệc trọn gói cho mọi dịp: sinh nhật, họp mặt, liên hoan, tân gia, tiệc công ty. Có khu nhà banh cho bé — cả nhà vừa ăn ngon, vừa thư giãn trọn buổi.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#menu">Xem thực đơn</a>
-          <a class="btn btn-ghost" href="#dat-tiec">Đặt tiệc ngay</a>
+          <a class="btn btn-primary" href="/thuc-don">Xem thực đơn</a>
+          <a class="btn btn-ghost" href="/dat-tiec">Đặt tiệc ngay</a>
         </div>
         <div class="info-strip">
           <div class="info-item">
@@ -793,533 +171,110 @@
       </div>
     </div>
   </section>
-
   <div class="blob-divider" aria-hidden="true">
     <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,32 C150,60 350,0 600,28 C850,56 1050,8 1200,30 L1200,60 L0,60 Z" fill="var(--surface)"/></svg>
   </div>
-
-  <!-- GIỚI THIỆU -->
-  <section id="gioi-thieu">
-    <div class="wrap about-grid">
-      <div class="about-copy">
-        <p class="eyebrow">Giới thiệu</p>
-        <h2>Không gian cho cả gia đình</h2>
-        <p style="margin-top:16px;">Đồng Gia Viên là nhà hàng sân vườn rộng rãi giữa tiểu cảnh hòn non bộ xanh mát, không gian ấm cúng phục vụ các món gia đình đậm vị quê nhà và nhận đặt tiệc trọn gói cho mọi dịp: sinh nhật, họp mặt, liên hoan, tân gia, tiệc công ty. Nhà hàng còn có khu nhà banh dành cho trẻ em, là điểm đến lý tưởng để cả nhà vừa thưởng thức món ngon vừa quây quần bên nhau.</p>
+  <!-- LỐI VÀO CÁC TRANG -->
+  <section id="kham-pha">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Khám phá Đồng Gia Viên</p>
+        <h2>Bạn đang cần gì hôm nay?</h2>
+        <p>Mỗi mục bên dưới trích vài nội dung tiêu biểu — bấm vào để xem đầy đủ.</p>
       </div>
-      <ul class="feature-list">
-        <li>
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2C7 6 4 10 4 14a8 8 0 0 0 16 0c0-4-3-8-8-12Z"/></svg></div>
-          <div><h4>Tiểu cảnh hòn non bộ</h4><small>Không gian xanh mát, gần gũi thiên nhiên</small></div>
-        </li>
-        <li>
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div>
-          <div><h4>Không gian ấm cúng</h4><small>Phù hợp gia đình, bạn bè quây quần</small></div>
-        </li>
-        <li>
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="4"/><circle cx="6" cy="16" r="2.5"/><circle cx="18" cy="16" r="2.5"/></svg></div>
-          <div><h4>Khu nhà banh trẻ em</h4><small>Bé vui chơi thoải mái, ba mẹ an tâm dùng bữa</small></div>
-        </li>
-        <li>
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 11h16M6 11V7a6 6 0 0 1 12 0v4M5 11l1 9h12l1-9"/></svg></div>
-          <div><h4>Món gia đình &amp; set tiệc</h4><small>Thực đơn đa dạng, đậm vị nhà làm</small></div>
-        </li>
-      </ul>
+      <div class="hub-grid">
+
+        <a class="hub-card" href="/gioi-thieu">
+          <img src="images/khong-gian-san-vuon.jpg" width="825" height="1100" loading="lazy" decoding="async" alt="Không gian sân vườn Đồng Gia Viên">
+          <div class="hub-body">
+            <h3>Giới thiệu</h3>
+            <p class="hub-sub">Không gian cho cả gia đình</p>
+            <ul class="peek-list ticks">
+              <li>Nhà hàng sân vườn giữa tiểu cảnh hòn non bộ xanh mát</li>
+              <li>Không gian ấm cúng, phù hợp gia đình và bạn bè quây quần</li>
+              <li>Món gia đình đậm vị quê nhà, thực đơn đa dạng</li>
+              <li>Khu nhà banh cho trẻ em ngay trong khuôn viên</li>
+              <li>Nhận tiệc sinh nhật, họp mặt, liên hoan, tân gia, tiệc công ty</li>
+            </ul>
+            <span class="hub-more">Tìm hiểu về quán →</span>
+          </div>
+        </a>
+
+        <a class="hub-card" href="/khu-tre-em">
+          <img src="images/khu-nha-banh.jpg" width="1100" height="1100" loading="lazy" decoding="async" alt="Khu nhà banh cho trẻ em tại Đồng Gia Viên">
+          <div class="hub-body">
+            <h3>Khu trẻ em</h3>
+            <p class="hub-sub">Dành cho gia đình có con nhỏ</p>
+            <ul class="peek-list ticks">
+              <li>Khu nhà banh ngay trong khuôn viên quán</li>
+              <li>Bé chơi tại chỗ, không phải đi đâu xa</li>
+              <li>Sân vườn rộng, thoáng giữa tiểu cảnh hòn non bộ</li>
+              <li>Ba mẹ có thời gian ngồi lại với nhau hết bữa cơm</li>
+              <li>Nhận đặt tiệc sinh nhật cho bé, tính theo đầu khách</li>
+            </ul>
+            <span class="hub-more">Xem khu vui chơi →</span>
+          </div>
+        </a>
+
+        <a class="hub-card" href="/thuc-don">
+          <img src="images/vit-quay-gion-da.jpg" width="1080" height="810" loading="lazy" decoding="async" alt="Món ăn tại Đồng Gia Viên">
+          <div class="hub-body">
+            <h3>Thực đơn</h3>
+            <p class="hub-sub">Vài món tiêu biểu trong 11 nhóm món của quán</p>
+            <ul class="peek-list">
+              <li><span>Mẹt gà 3 món</span><b>400k</b></li>
+              <li><span>Lẩu gà lá é ớt xiêm xanh</span><b>259k/con</b></li>
+              <li><span>Tôm sốt Thái</span><b>125k/đĩa</b></li>
+              <li><span>Gỏi hải sản</span><b>95k/đĩa</b></li>
+              <li><span>Bê hấp tía tô</span><b>95k/đĩa</b></li>
+              <li><span>Cơm chiên hải sản</span><b>79k/đĩa</b></li>
+            </ul>
+            <span class="hub-more">Xem toàn bộ thực đơn →</span>
+          </div>
+        </a>
+
+        <a class="hub-card" href="/dat-tiec">
+          <img src="images/sanh-tiec.jpg" width="825" height="1100" loading="lazy" decoding="async" alt="Sảnh tiệc Đồng Gia Viên">
+          <div class="hub-body">
+            <h3>Đặt tiệc</h3>
+            <p class="hub-sub">Vài mức trong 16 mức set thực đơn, tính theo đầu khách</p>
+            <ul class="peek-list">
+              <li><span>Set ấm cúng</span><b>135.000đ/khách</b></li>
+              <li><span>Set sum vầy</span><b>195.000đ/khách</b></li>
+              <li><span>Set nổi bật của quán</span><b>225.000đ/khách</b></li>
+              <li><span>Set trang trọng</span><b>295.000đ/khách</b></li>
+              <li><span>Set cao nhất</span><b>400.000đ/khách</b></li>
+              <li><span>Nhận tiệc từ 10 đến ~200 khách</span><b>16 mức giá</b></li>
+            </ul>
+            <span class="hub-more">Xem bảng giá &amp; đặt tiệc →</span>
+          </div>
+        </a>
+
+      </div>
     </div>
   </section>
-
   <div class="blob-divider" aria-hidden="true" style="transform:scaleY(-1);">
     <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,32 C150,60 350,0 600,28 C850,56 1050,8 1200,30 L1200,60 L0,60 Z" fill="var(--bg)"/></svg>
   </div>
-
-  <!-- BENTO GALLERY -->
-  <section id="khoanh-khac">
+  <!-- LIÊN HỆ NGẮN GỌN -->
+  <section id="ghe-quan">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Hình ảnh thực tế</p>
-        <h2>Khoảnh khắc tại Đồng Gia Viên</h2>
-        <p>Không gian quán và những món ăn được chuẩn bị tỉ mỉ mỗi ngày.</p>
-      </div>
-      <div class="bento-grid">
-        <div class="bento-item big">
-          <img src="images/khong-gian-san-vuon.jpg" width="825" height="1100" decoding="async" alt="Không gian sân vườn Đồng Gia Viên" loading="lazy">
-          <div class="bento-cap">Không gian sân vườn ấm áp</div>
+      <div class="cta-band">
+        <div class="cta-copy">
+          <p class="eyebrow">Liên hệ</p>
+          <h2>Ghé thăm Đồng Gia Viên</h2>
+          <ul class="peek-list band-list">
+            <li><span>Địa chỉ</span><b>Số 1 Trần Văn Dũng (qua cầu 2 Hà Thanh), P. Quy Nhơn, Tỉnh Gia Lai</b></li>
+            <li><span>Giờ mở cửa</span><b>10:00 – 22:00 tất cả các ngày trong tuần</b></li>
+            <li><span>Điện thoại</span><b>0931.7944.88 – 0935.199.557</b></li>
+            <li><span>Zalo</span><b>0931.7944.88</b></li>
+            <li><span>Facebook</span><b>dgv.quynhon</b></li>
+          </ul>
         </div>
-        <div class="bento-item">
-          <img src="images/goi-hai-san.jpg" width="1100" height="825" decoding="async" alt="Gỏi hải sản Đồng Gia Viên" loading="lazy">
-          <div class="bento-cap">Gỏi hải sản tươi ngon</div>
-        </div>
-        <div class="bento-item">
-          <img src="images/ban-cong-san-vuon.jpg" width="1100" height="825" decoding="async" alt="Ban công sân vườn Đồng Gia Viên" loading="lazy">
-          <div class="bento-cap">Góc ban công ấm áp</div>
-        </div>
-        <div class="bento-item wide">
-          <img src="images/trang-mieng-nhieu-mau.jpg" width="832" height="1100" decoding="async" alt="Tráng miệng đầy màu sắc tại Đồng Gia Viên" loading="lazy">
-          <div class="bento-cap">Tráng miệng đầy màu sắc</div>
-        </div>
-        <div class="bento-item">
-          <img src="images/sanh-tiec.jpg" width="825" height="1100" decoding="async" alt="Sảnh tiệc Đồng Gia Viên" loading="lazy">
-          <div class="bento-cap">Không gian tiệc ấm cúng</div>
-        </div>
-        <div class="bento-item wide">
-          <img src="images/mon-che-bien-ti-mi.jpg" width="1060" height="748" decoding="async" alt="Món ăn trang trí đẹp mắt" loading="lazy">
-          <div class="bento-cap">Món ngon chế biến tỉ mỉ</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- KHU TRẺ EM -->
-  <section id="khu-tre-em">
-    <div class="wrap kid-grid">
-      <div class="kid-copy">
-        <p class="eyebrow">Dành cho gia đình có trẻ nhỏ</p>
-        <h2>Ba mẹ ăn trọn bữa, bé chơi trọn buổi</h2>
-        <p class="kid-lead">Nhiều nhà ngại dắt con đi ăn ngoài, vì bé ngồi chưa ấm chỗ đã đòi đứng dậy. Ở Đồng Gia Viên có khu nhà banh ngay trong khuôn viên quán — bé có chỗ chạy nhảy, người lớn có thời gian ngồi lại với nhau cho hết bữa cơm.</p>
-        <ul class="feature-list" style="margin-top:24px;">
-          <li>
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="4"/><circle cx="6" cy="16" r="2.5"/><circle cx="18" cy="16" r="2.5"/></svg></div>
-            <div><h4>Khu nhà banh trong khuôn viên</h4><small>Bé chơi ngay tại quán, không phải đi đâu xa</small></div>
-          </li>
-          <li>
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2C7 6 4 10 4 14a8 8 0 0 0 16 0c0-4-3-8-8-12Z"/></svg></div>
-            <div><h4>Sân vườn rộng, thoáng</h4><small>Không gian xanh mát giữa tiểu cảnh hòn non bộ</small></div>
-          </li>
-          <li>
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 11h16M6 11V7a6 6 0 0 1 12 0v4M5 11l1 9h12l1-9"/></svg></div>
-            <div><h4>Nhận đặt tiệc sinh nhật cho bé</h4><small>Tiệc trọn gói tính theo đầu khách, chọn set phù hợp</small></div>
-          </li>
-        </ul>
-        <div class="kid-cta">
-          <a class="btn btn-primary" href="#dat-tiec-nhanh">Đặt bàn cho cả nhà</a>
-          <a class="btn btn-ghost" href="tel:0931794488">Gọi hỏi thêm</a>
-        </div>
-      </div>
-      <div class="kid-photos">
-        <img src="images/khu-nha-banh.jpg" width="1100" height="1100" decoding="async" loading="lazy" alt="Khu nhà banh cho trẻ em tại Đồng Gia Viên">
-        <img src="images/khu-vui-choi-tre-em.jpg" width="1100" height="1100" decoding="async" loading="lazy" alt="Trẻ em vui chơi tại khu nhà banh Đồng Gia Viên">
-      </div>
-    </div>
-  </section>
-
-  <div class="blob-divider" aria-hidden="true">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,32 C150,60 350,0 600,28 C850,56 1050,8 1200,30 L1200,60 L0,60 Z" fill="var(--bg)"/></svg>
-  </div>
-
-  <!-- THỰC ĐƠN -->
-  <section id="menu">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Thực đơn</p>
-        <h2>Món ngon mỗi ngày</h2>
-        <p>Thực đơn tham khảo — quán sẽ cập nhật thêm món theo mùa.</p>
-      </div>
-
-      <div class="reel-frame">
-        <div class="reel-slides" id="reelSlides">
-          <img class="reel-slide active" loading="lazy" src="images/vit-quay-gion-da.jpg" width="1080" height="810" decoding="async" alt="Vịt quay giòn da">
-          <img class="reel-slide" loading="lazy" src="images/ca-hoi-nuong-sot-chua-ngot.jpg" width="1100" height="522" decoding="async" alt="Cá hồi nướng sốt chua ngọt">
-          <img class="reel-slide" loading="lazy" src="images/goi-ca-ngu-trung-cut.jpg" width="495" height="1100" decoding="async" alt="Gỏi cá ngừ trứng cút">
-          <img class="reel-slide" loading="lazy" src="images/sup-tom-nguyen-con.jpg" width="1100" height="761" decoding="async" alt="Súp tôm nguyên con">
-          <img class="reel-slide" loading="lazy" src="images/trang-mieng-nhieu-mau.jpg" width="832" height="1100" decoding="async" alt="Chè thập cẩm nhiều màu">
-          <img class="reel-slide" loading="lazy" src="images/luon-nuong-mien.jpg" width="960" height="720" decoding="async" alt="Lươn nướng miến">
-          <img class="reel-slide" loading="lazy" src="images/goi-hai-san.jpg" width="1100" height="825" decoding="async" alt="Gỏi hải sản chua cay">
-          <img class="reel-slide" loading="lazy" src="images/bo-ham-sot-tieu.jpg" width="825" height="1100" decoding="async" alt="Bò hầm sốt tiêu">
-          <img class="reel-slide" loading="lazy" src="images/com-tron-hai-san.jpg" width="825" height="1100" decoding="async" alt="Cơm trộn hải sản">
-          <img class="reel-slide" loading="lazy" src="images/bun-bo-xu-nau.jpg" width="1100" height="495" decoding="async" alt="Bún bò xứ Nẫu">
-        </div>
-        <div class="reel-overlay"></div>
-        <div class="reel-caption" id="reelCaption">Vịt quay giòn da</div>
-        <div class="reel-dots" id="reelDots"></div>
-      </div>
-
-      <div class="menu-tabs" role="tablist" id="menuTabs">
-        <button class="tab-btn" role="tab" aria-selected="true" data-target="tab-chinh">Món chính</button>
-        <button class="tab-btn" role="tab" aria-selected="false" data-target="tab-settiec">Set tiệc theo khách</button>
-      </div>
-
-      <div class="menu-panel active" id="tab-chinh">
-        <div class="menu-cat">
-          <h4>Rau củ quả</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Ngũ quả kho quẹt</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Bầu luộc chấm trứng</div></div><div class="price">55k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Rau muống luộc</div></div><div class="price">45k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Rau muống xào tỏi</div></div><div class="price">45k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Rau cải luộc, xào tỏi</div></div><div class="price">45k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Đậu bắp luộc</div></div><div class="price">45k/đĩa</div></div>
-          </div>
-        </div>
-        <div class="menu-cat">
-          <h4>Gỏi, khai vị, ăn nhanh</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Gỏi bò bóp thấu</div></div><div class="price">85k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Gỏi hải sản</div></div><div class="price">95k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Gỏi da bò trộn măng Tây Sơn</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Gỏi sứa trộn</div></div><div class="price">85k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Đậu hũ chiên</div></div><div class="price">45k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Khoai lang chiên</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Khoai tây chiên</div></div><div class="price">55k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Chả ram tôm</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Dồi sụn chiên</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Dồi dê nướng</div></div><div class="price">79k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Giò heo xông khói chiên</div></div><div class="price">95k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Ếch xào sả ớt</div></div><div class="price">75k</div></div>
-            <div class="menu-item"><div><div class="name">Lươn xào sả ớt</div></div><div class="price">75k</div></div>
-          </div>
-        </div>
-        <div class="menu-cat">
-          <h4>Mực, tôm, ốc</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Tôm bạc hấp</div></div><div class="price">95k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Tôm sốt Thái</div></div><div class="price">125k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Tôm sú</div></div><div class="price">450k/kg</div></div>
-            <div class="menu-item"><div><div class="name">Mực nang hấp hành cần</div></div><div class="price">129k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Mực nang chiên tỏi</div></div><div class="price">129k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Mực cơm chiên tỏi</div></div><div class="price">95k/đĩa</div></div>
-          </div>
-        </div>
-        <div class="menu-cat">
-          <h4>Cơm, mì, cháo</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Cơm lam</div></div><div class="price">20k/ống</div></div>
-            <div class="menu-item"><div><div class="name">Cơm trắng</div></div><div class="price">20k/tô</div></div>
-            <div class="menu-item"><div><div class="name">Cơm chiên trứng</div></div><div class="price">45k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Cơm chiên cá mặn</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Cơm chiên hải sản</div></div><div class="price">79k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Cơm chiên dưa bò</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Cơm chiên thập cẩm</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Cháo hải sản</div></div><div class="price">79k/tô</div></div>
-            <div class="menu-item"><div><div class="name">Mì xào bò</div></div><div class="price">69k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Mì xào hải sản</div></div><div class="price">79k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Mì xào rau</div></div><div class="price">45k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Lòng gà nấu xôi</div></div><div class="price">59k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Lòng gà nấu miến</div></div><div class="price">55k/tô</div></div>
-            <div class="menu-item"><div><div class="name">Lòng gà xào miến</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Lòng gà xào mướp</div></div><div class="price">55k/đĩa</div></div>
-          </div>
-        </div>
-        <div class="menu-cat">
-          <h4>Gà (không kèm lòng)</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Gà tre hấp mắm</div></div><div class="price">230k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà tre nướng muối</div></div><div class="price">230k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà tre nướng tây bắc</div></div><div class="price">280k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà chiên mắm</div></div><div class="price">285k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà rang muối</div></div><div class="price">285k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà hấp mắm</div></div><div class="price">285k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà say rượu tại bàn</div></div><div class="price">300k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà nướng tây bắc</div></div><div class="price">300k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà kho sả ớt</div></div><div class="price">285k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà nướng muối ớt</div></div><div class="price">300k/con</div></div>
-            <div class="menu-item"><div><div class="name">Gà đá nguyên con (5 món)</div></div><div class="price">215k/kg</div></div>
-            <div class="menu-item"><div><div class="name">Vịt xiêm nguyên con (4 món)</div></div><div class="price">169k/kg</div></div>
-            <div class="menu-item"><div><div class="name">Gà H'Mông nướng tây bắc</div></div><div class="price">430k/con</div></div>
-          </div>
-          <p class="menu-note">Gà đá, vịt xiêm vui lòng đặt trước.</p>
-        </div>
-        <div class="menu-cat">
-          <h4>Thỏ — món nguyên con <span style="font-weight:500; text-transform:none; font-size:0.8rem;">(179k/kg)</span></h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Thỏ ủ trấu (150 phút)</div></div><div class="price">179k/kg</div></div>
-            <div class="menu-item"><div><div class="name">Thỏ quay nguyên con (75 phút)</div></div><div class="price">179k/kg</div></div>
-            <div class="menu-item"><div><div class="name">Thỏ các món (tiết canh/nướng/xào lăn/hấp)</div></div><div class="price">179k/kg</div></div>
-          </div>
-        </div>
-        <div class="menu-cat">
-          <h4>Heo, bê</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Bê hấp tía tô</div></div><div class="price">95k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Bê nướng mắm nhĩ / muối ớt</div></div><div class="price">95k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Bê xào sả ớt</div></div><div class="price">95k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Bê xào lăn</div></div><div class="price">95k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Ba chỉ cháy riềng</div></div><div class="price">75k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Sườn heo nướng</div></div><div class="price">85k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Sườn heo chiên mắm</div></div><div class="price">85k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Heo mọi nguyên con</div></div><div class="price">185k/kg</div></div>
-            <div class="menu-item"><div><div class="name">Dê nguyên con</div></div><div class="price">210k/kg</div></div>
-          </div>
-          <p class="menu-note">Heo mọi, dê nguyên con vui lòng đặt trước.</p>
-        </div>
-        <div class="menu-cat">
-          <h4>Cá</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Cá lóc nướng quay</div></div><div class="price">125k/con</div></div>
-            <div class="menu-item"><div><div class="name">Cá lóc hấp bầu</div></div><div class="price">95k/con</div></div>
-            <div class="menu-item"><div><div class="name">Cá lóc um chuối</div></div><div class="price">95k/con</div></div>
-            <div class="menu-item"><div><div class="name">Cá mú (3 món)</div></div><div class="price">389k/kg</div></div>
-            <div class="menu-item"><div><div class="name">Cá mú nấu mẳn / hấp Hồng Kông / lẩu Thái</div></div><div class="price">Theo thời giá</div></div>
-            <div class="menu-item"><div><div class="name">Cá chẽm hấp xì dầu / nấu mẳn / nấu măng</div></div><div class="price">Theo thời giá</div></div>
-            <div class="menu-item"><div><div class="name">Chình nướng muối ớt / nướng nghệ / um chuối</div></div><div class="price">Theo thời giá</div></div>
-          </div>
-          <p class="menu-note">Cá mú, cá chẽm, chình vui lòng chờ khoảng 15 phút.</p>
-        </div>
-        <div class="menu-cat">
-          <h4>Lẩu</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Lẩu gà lá giang</div></div><div class="price">259k/con</div></div>
-            <div class="menu-item"><div><div class="name">Lẩu gà nấm</div></div><div class="price">259k/con</div></div>
-            <div class="menu-item"><div><div class="name">Lẩu gà lá é ớt xiêm xanh</div></div><div class="price">259k/con</div></div>
-            <div class="menu-item"><div><div class="name">Lẩu gà H'Mông nấm hương</div></div><div class="price">450k/con</div></div>
-            <div class="menu-item"><div><div class="name">Lẩu gà H'Mông lá giang</div></div><div class="price">450k/con</div></div>
-            <div class="menu-item"><div><div class="name">Lẩu riêu cua bắp bò</div></div><div class="price">179k/nồi</div></div>
-            <div class="menu-item"><div><div class="name">Lẩu riêu cua hải sản</div></div><div class="price">245k/nồi</div></div>
-            <div class="menu-item"><div><div class="name">Lẩu hải sản chua cay</div></div><div class="price">245k/nồi</div></div>
-            <div class="menu-item"><div><div class="name">Lẩu mực Đại Lãnh</div></div><div class="price">110k/người</div></div>
-          </div>
-        </div>
-        <div class="menu-cat">
-          <h4>Món um, hầm</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Gà H'Mông hầm sen nấm</div></div><div class="price">489k/con</div></div>
-            <div class="menu-item"><div><div class="name">Sườn heo nấu măng / củ</div></div><div class="price">135k/nồi</div></div>
-            <div class="menu-item"><div><div class="name">Vịt lộn um bầu</div></div><div class="price">79k/nồi</div></div>
-            <div class="menu-item"><div><div class="name">Gà hầm bí đỏ (đặt trước)</div></div><div class="price">350k/con</div></div>
-          </div>
-        </div>
-        <div class="menu-cat">
-          <h4>Best seller</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Mẹt gà 3 món</div></div><div class="price">400k</div></div>
-            <div class="menu-item"><div><div class="name">Mẹt lụi bò nướng 4 món</div></div><div class="price">200k</div></div>
-            <div class="menu-item"><div><div class="name">Bào ngư hầm nấm / Vi cá hầm hạt sen / Tôm hùm</div></div><div class="price">Liên hệ</div></div>
-          </div>
-        </div>
-        <div class="menu-cat">
-          <h4>Nước giải khát &amp; Bia</h4>
-          <div class="menu-list">
-            <div class="menu-item"><div><div class="name">Trà xanh 0 độ / Pepsi / Sting</div></div><div class="price">14k</div></div>
-            <div class="menu-item"><div><div class="name">Bò húc</div></div><div class="price">18k</div></div>
-            <div class="menu-item"><div><div class="name">Nước cam ép</div></div><div class="price">14k</div></div>
-            <div class="menu-item"><div><div class="name">Nước suối / Vĩnh Hảo</div></div><div class="price">10–14k</div></div>
-            <div class="menu-item"><div><div class="name">Ken lon / chai</div></div><div class="price">22–24k</div></div>
-            <div class="menu-item"><div><div class="name">Tiger nâu / bạc</div></div><div class="price">17–20k</div></div>
-            <div class="menu-item"><div><div class="name">Bivina lon / chai</div></div><div class="price">11–14k</div></div>
-            <div class="menu-item"><div><div class="name">Quy Nhơn chai</div></div><div class="price">7.5k</div></div>
-          </div>
-        </div>
-        <p class="menu-note">* Giá trên chưa gồm VAT. Món "Theo thời giá" tuỳ biến động thị trường hải sản — vui lòng gọi hotline để có giá mới nhất.</p>
-      </div>
-
-      <div class="menu-panel" id="tab-settiec">
-        <p style="font-size:1.02rem; color:var(--ink-soft); max-width:70ch; margin:0 auto; text-align:center;">Đồng Gia Viên phục vụ theo <strong style="color:var(--ink);">set thực đơn trọn gói, tính theo đầu khách</strong> — mỗi set gồm đầy đủ khai vị, món mặn, lẩu/canh, cơm và tráng miệng. Hiện có <strong style="color:var(--ink);">36 thực đơn set</strong> ứng với 16 mức giá, từ <strong style="color:var(--clay-deep);">135.000đ</strong> đến <strong style="color:var(--clay-deep);">400.000đ / khách</strong>.</p>
-        <div class="set-teaser">
-          <img src="images/goi-ca-ngu-trung-cut.jpg" width="495" height="1100" decoding="async" alt="Món gỏi cá ngừ Đồng Gia Viên" loading="lazy">
-          <img src="images/mon-trang-tri-ti-mi.jpg" width="1100" height="1073" decoding="async" alt="Món trang trí tỉ mỉ Đồng Gia Viên" loading="lazy">
-          <img src="images/ca-hoi-nuong-sot-chua-ngot.jpg" width="1100" height="522" decoding="async" alt="Món cá hồi nướng Đồng Gia Viên" loading="lazy">
-        </div>
-        <div class="set-cta">
-          <a class="btn btn-primary" href="#dat-tiec">Xem toàn bộ bảng giá set tiệc</a>
-          <p class="menu-note" style="text-align:center;">Món ăn lẻ (bún, phở, cơm...) đang được quán cập nhật thêm — vui lòng gọi hotline <strong style="color:var(--ink); font-style:normal;">0931.7944.88 – 0935.199.557</strong> để được tư vấn trực tiếp.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="blob-divider" aria-hidden="true">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,32 C150,60 350,0 600,28 C850,56 1050,8 1200,30 L1200,60 L0,60 Z" fill="var(--surface)"/></svg>
-  </div>
-
-  <!-- ĐẶT TIỆC -->
-  <section id="dat-tiec">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Đặt tiệc buổi chiều</p>
-        <h2>Gói tiệc cho mọi dịp sum vầy</h2>
-        <p>Sinh nhật, họp mặt, tất niên — 16 mức giá từ 135.000đ đến 400.000đ/khách, mỗi mức có nhiều thực đơn set để chọn.</p>
-      </div>
-
-      <div class="capacity-strip">
-        <div class="cap-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <div>Nhận tiệc từ <strong>10 khách</strong></div>
-        </div>
-        <div class="cap-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9v.01M9 13v.01M9 17v.01M15 9v.01M15 13v.01M15 17v.01"/></svg>
-          <div>Sảnh tiệc phục vụ đến <strong>~200 khách</strong></div>
-        </div>
-        <div class="cap-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92Z"/></svg>
-          <div>Gọi hotline để chốt số bàn phù hợp</div>
-        </div>
-      </div>
-
-      <div class="calc">
-        <div>
-          <h3>Tính nhanh chi phí bữa tiệc</h3>
-          <p class="calc-sub">Kéo số khách và chọn mức set — biết ngay khoảng tiền, không cần gọi hỏi giá.</p>
-          <div class="calc-field">
-            <label for="calcGuests">Số khách: <output id="calcGuestsOut" for="calcGuests">40 khách</output></label>
-            <input type="range" id="calcGuests" min="10" max="200" step="5" value="40">
-          </div>
-          <div class="calc-field">
-            <label for="calcPkg">Mức set thực đơn</label>
-            <select id="calcPkg" aria-label="Chọn mức set thực đơn để tính chi phí"></select>
-          </div>
-        </div>
-        <div class="calc-out">
-          <p class="lbl">Tổng tạm tính</p>
-          <p class="calc-total" id="calcTotal">—</p>
-          <p class="calc-per" id="calcPer"></p>
-          <a class="btn btn-primary" href="#dat-tiec-nhanh" id="calcBook">Đặt mức này</a>
-          <p class="calc-note">Chưa gồm VAT · giá hải sản theo thời giá · gọi hotline 0931.7944.88 để chốt số bàn và thực đơn cuối cùng.</p>
-        </div>
-      </div>
-
-      <div class="pkg-filter" id="pkgFilter" role="group" aria-label="Lọc mức giá set tiệc">
-        <button type="button" class="filter-btn" data-tier="am-cung">Ấm cúng · 135–185k</button>
-        <button type="button" class="filter-btn active" data-tier="sum-vay">Sum vầy · 195–265k</button>
-        <button type="button" class="filter-btn" data-tier="trang-trong">Trang trọng · 275–400k</button>
-        <button type="button" class="filter-btn" data-tier="all">Xem tất cả 16 mức</button>
-      </div>
-      <p class="pkg-count" id="pkgCount"></p>
-
-      <div class="pkg-grid" id="pkgGrid"><!-- filled by JS from PKG_DATA --></div>
-      <p class="booking-note" style="margin-top:20px; text-align:center;">Mỗi mức giá có nhiều thực đơn set khác nhau — gọi hotline để xem đầy đủ và chọn set phù hợp. Giá trên chưa gồm VAT, giá hải sản biến động theo thị trường. Khách mang đồ ăn/thức uống riêng: phụ thu 150.000đ/kg đồ tươi sống, 200.000đ/chai rượu mạnh, 30.000đ/lít rượu ngâm. Không phục vụ rượu, bia, thuốc lá cho khách dưới 18 tuổi.</p>
-
-      <div class="booking" id="dat-tiec-nhanh">
-        <div>
-          <h3>Đặt tiệc nhanh</h3>
-          <p style="color:#d9c9b3; font-size:0.95rem;">Điền thông tin bên dưới, quán sẽ liên hệ xác nhận trong thời gian sớm nhất. Hoặc gọi trực tiếp để được tư vấn ngay.</p>
-          <p class="booking-note">Hotline: <strong style="color:#f5ebde;">0931.7944.88 – 0935.199.557</strong></p>
-        </div>
-        <form id="bookingForm">
-          <div class="form-grid">
-            <div>
-              <label for="fname">Họ và tên *</label>
-              <input id="fname" name="fname" required placeholder="Nguyễn Văn A">
-            </div>
-            <div>
-              <label for="fphone">Số điện thoại *</label>
-              <input id="fphone" name="fphone" type="tel" required placeholder="09xxxxxxxx">
-            </div>
-            <div>
-              <label for="fdate">Ngày &amp; giờ tổ chức *</label>
-              <input id="fdate" name="fdate" type="datetime-local" required>
-            </div>
-            <div>
-              <label for="fguests">Số lượng khách *</label>
-              <input id="fguests" name="fguests" type="number" min="1" required placeholder="20">
-            </div>
-            <div class="full">
-              <label for="fpackage">Chọn gói</label>
-              <select id="fpackage" name="fpackage"></select>
-              <div class="pkg-preview" id="pkgPreview"></div>
-            </div>
-            <div class="full">
-              <label for="fnote">Ghi chú thêm</label>
-              <textarea id="fnote" name="fnote" placeholder="Yêu cầu trang trí, sinh nhật, họp mặt công ty..."></textarea>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary form-submit">Gửi cho quán — quán gọi lại trong 15 phút</button>
-
-          <div id="bookingResult">
-            <div class="result-card">
-              <h4>Quán đã nhận được rồi ạ!</h4>
-              <p id="bookingCode" class="booking-code"></p>
-              <p id="bookingSummary"></p>
-              <p class="booking-promise">Quán sẽ gọi lại xác nhận trong <strong>15 phút</strong> (trong giờ mở cửa 10:00–22:00).</p>
-              <div class="result-actions">
-                <a class="btn btn-jade" href="tel:0931794488">Gọi ngay để xác nhận</a>
-                <a class="btn btn-ghost" id="zaloLink" href="https://zalo.me/0931794488" target="_blank" rel="noopener" style="border-color:var(--marigold); color:var(--marigold-soft);">Nhắn Zalo</a>
-              </div>
-              <p id="bookingHint" style="font-size:0.84rem; color:#bfae97; margin:12px 0 0;"></p>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <div class="blob-divider" aria-hidden="true">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,32 C150,60 350,0 600,28 C850,56 1050,8 1200,30 L1200,60 L0,60 Z" fill="var(--bg)"/></svg>
-  </div>
-
-  <!-- CÂU HỎI THƯỜNG GẶP -->
-  <section id="cau-hoi">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Giải đáp</p>
-        <h2>Câu hỏi thường gặp</h2>
-        <p>Những điều khách hay hỏi trước khi đặt tiệc tại quán.</p>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item" open>
-          <summary>Quán nhận đặt tiệc từ bao nhiêu khách?</summary>
-          <p>Quán nhận tiệc từ 10 khách. Sảnh tiệc phục vụ được đến khoảng 200 khách. Gọi hotline 0931.7944.88 để quán tư vấn số bàn phù hợp với nhóm của mình.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Set tiệc có bao nhiêu mức giá, mỗi set gồm những gì?</summary>
-          <p>Hiện có 36 thực đơn set ứng với 16 mức giá, từ 135.000đ đến 400.000đ mỗi khách. Mỗi set gồm đầy đủ khai vị, món mặn, lẩu hoặc canh, cơm và tráng miệng. Mỗi mức giá có nhiều thực đơn khác nhau để chọn — gọi hotline để xem đầy đủ.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Giá trên đã gồm VAT chưa?</summary>
-          <p>Giá niêm yết chưa gồm VAT. Riêng các món hải sản tính theo thời giá thị trường nên có thể thay đổi — gọi hotline để có giá mới nhất trước khi chốt.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Mang bánh kem, rượu bia từ ngoài vào được không?</summary>
-          <p>Được, quán có phụ thu: 150.000đ mỗi kg đồ tươi sống, 200.000đ mỗi chai rượu mạnh, 30.000đ mỗi lít rượu ngâm. Quán không phục vụ rượu, bia, thuốc lá cho khách dưới 18 tuổi.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Đi cùng trẻ nhỏ thì bé có chỗ chơi không?</summary>
-          <p>Có. Quán có khu nhà banh dành cho trẻ em ngay trong khuôn viên, cùng không gian sân vườn rộng rãi — bé chơi thoải mái, ba mẹ ngồi dùng bữa trọn buổi.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Quán mở cửa giờ nào và ở đâu?</summary>
-          <p>Quán mở cửa 10:00 – 22:00 tất cả các ngày trong tuần, tại Số 1 Trần Văn Dũng (qua cầu 2 Hà Thanh), P. Quy Nhơn, Tỉnh Gia Lai.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Đặt tiệc bằng cách nào là nhanh nhất?</summary>
-          <p>Điền form “Đặt tiệc nhanh” ngay trên trang này, hoặc gọi trực tiếp 0931.7944.88 – 0935.199.557. Quán cũng nhận đặt qua Zalo và Facebook.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- LIÊN HỆ -->
-  <section id="lien-he">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Liên hệ</p>
-        <h2>Ghé thăm Đồng Gia Viên</h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-row">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><strong>Địa chỉ</strong><span>Số 1 Trần Văn Dũng (qua cầu 2 Hà Thanh), P. Quy Nhơn, Tỉnh Gia Lai</span></div>
-          </div>
-          <div class="contact-row">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-            <div><strong>Giờ mở cửa</strong><span>10:00 – 22:00 (tất cả các ngày trong tuần)</span></div>
-          </div>
-          <div class="contact-row">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92Z"/></svg></div>
-            <div><strong>Điện thoại</strong><span><a href="tel:0931794488">0931.7944.88</a> – <a href="tel:0935199557">0935.199.557</a></span></div>
-          </div>
-          <div class="contact-row">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></div>
-            <div><strong>Facebook</strong><span><a href="https://www.facebook.com/dgv.quynhon" target="_blank" rel="noopener">dgv.quynhon</a> · <a href="https://www.facebook.com/phuanhcorp" target="_blank" rel="noopener">phuanhcorp</a></span></div>
-          </div>
-          <div style="display:flex; gap:12px; margin-top:6px; flex-wrap:wrap;">
-            <a class="btn btn-primary" href="tel:0931794488">Gọi đặt bàn</a>
-            <a class="btn btn-ghost" href="https://maps.app.goo.gl/s4auXzydXzjMDxuA8" target="_blank" rel="noopener">Chỉ đường</a>
-          </div>
-        </div>
-        <div class="map-frame">
-          <iframe
-            title="Bản đồ Đồng Gia Viên"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3874.753027113095!2d109.2187642!3d13.7937564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f6b80b698b80f%3A0xeed14bce3e633192!2zxJDhu5NuZyBHaWEgVmnDqm4!5e0!3m2!1svi!2s!4v1787793594083!5m2!1svi!2s"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            onerror="this.style.display='none'; document.getElementById('mapFallback').style.display='flex';">
-          </iframe>
-          <div class="map-fallback" id="mapFallback" style="display:none;">
-            <span class="eyebrow">Bản đồ</span>
-            <p style="color:var(--ink-soft); font-size:0.9rem;">Số 1 Trần Văn Dũng (qua cầu 2 Hà Thanh), P. Quy Nhơn, Tỉnh Gia Lai</p>
-            <a class="btn btn-primary" href="https://maps.app.goo.gl/s4auXzydXzjMDxuA8" target="_blank" rel="noopener">Mở Google Maps</a>
-          </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="tel:0931794488" data-track="cta-band">Gọi 0931.7944.88</a>
+          <a class="btn btn-ghost" href="https://maps.app.goo.gl/s4auXzydXzjMDxuA8" target="_blank" rel="noopener">Chỉ đường tới quán</a>
+          <a class="btn btn-ghost" href="/lien-he">Bản đồ &amp; câu hỏi thường gặp</a>
         </div>
       </div>
     </div>
@@ -1349,6 +304,15 @@
     </div>
 
     <div class="footer-col footer-connect">
+      <p class="footer-connect-label">Các trang</p>
+      <nav class="footer-nav" aria-label="Danh sách trang">
+        <a href="/">Trang chủ</a>
+        <a href="/gioi-thieu">Giới thiệu</a>
+        <a href="/thuc-don">Thực đơn</a>
+        <a href="/dat-tiec">Đặt tiệc</a>
+        <a href="/khu-tre-em">Khu trẻ em</a>
+        <a href="/lien-he">Liên hệ</a>
+      </nav>
       <p class="footer-connect-label">Kết nối với Đồng Gia Viên</p>
       <div class="footer-social">
         <a href="https://www.facebook.com/dgv.quynhon" target="_blank" rel="noopener" aria-label="Facebook Đồng Gia Viên">
@@ -1361,7 +325,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
         </a>
       </div>
-      <a class="back-top" href="#home">↑ Về đầu trang</a>
+      <a class="back-top" href="#top">↑ Về đầu trang</a>
     </div>
   </div>
   <div class="wrap fine">© <span id="year"></span> Công ty TNHH Thương mại và Dịch vụ Ẩm thực Hương Quê · MSDN 4101680398 · Giờ mở cửa 10:00 – 22:00</div>
@@ -1387,318 +351,6 @@
   </a>
 </div>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const burger = document.getElementById('burgerBtn');
-  const navLinks = document.getElementById('navLinks');
-  burger.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-  }));
-
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.setAttribute('aria-selected', 'false'));
-      btn.setAttribute('aria-selected', 'true');
-      document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
-      document.getElementById(btn.dataset.target).classList.add('active');
-    });
-  });
-
-  // Party packages — full dish names per price tier
-  const PKG_DATA = [
-    {price:"135.000đ", dishes:["Cải xào tỏi","Cá điêu hồng chiên mắm xoài","Sườn rim mặn","Cá suối chiên giòn","Lươn xào sả ớt","Canh riêu cua rau tập tàng","Cơm trắng, rau sống, tráng miệng, trà đá"]},
-    {price:"150.000đ", dishes:["Rau tập tàng xào tỏi","Cá biển chiên mắm xoài","Gà kho sả ớt / kho gừng","Sườn rim tôm","Mực xào hành cần","Canh mồng tơi, cà pháo","Cơm trắng, rau sống, tráng miệng, trà đá"]},
-    {price:"175.000đ", dishes:["Gỏi da bò","Mực xào chua ngọt","Sườn rim tôm","Ba chỉ rang cháy cạnh","Rau thập cẩm xào tỏi","Cá biển kho tộ","Canh tập tàng nấu tôm","Cơm trắng, rau sống, trái cây, trà đá"]},
-    {price:"185.000đ", dishes:["Gỏi bò bóp thấu","Mực cơm chiên tỏi","Hàu nướng mỡ hành","Gà kho sả ớt","Canh cải nấu tôm","Cá thu sốt cà","Rau muống xào tỏi","Cơm trắng, rau sống, trà đá, tráng miệng"]},
-    {price:"195.000đ", dishes:["Chả giò hải sản","Gỏi củ hũ dừa hải sản","Xìa hấp xả","Vẹm nướng mỡ hành","Tôm bạc rang muối","Lẩu hải sản","Bún tươi / mì tôm ăn lẩu","Cơm trắng, tráng miệng, trà đá"]},
-    {price:"205.000đ", dishes:["Ngũ quả luộc","Xìa hấp xả","Gỏi hải sản","Tôm bạc rang muối","Cá biển nướng (bánh tráng cuốn)","Cơm chiên Dương Châu","Cháo hải sản","Cải xanh luộc, rau sống, trà đá, tráng miệng"]},
-    {price:"215.000đ", dishes:["Gỏi bò tái chanh","Chả ram tôm","Mực hấp","Tôm bạc rang muối","Lẩu gà lá giang","Cơm chiên hải sản","Bún tươi / mì tôm ăn lẩu","Rau xanh xào tỏi theo mùa, cơm trắng, tráng miệng, trà đá"]},
-    {price:"225.000đ", dishes:["Chả ram tôm","Gỏi hải sản","Hàu nướng mỡ hành","Mực cơm chiên tỏi","Cá biển nướng (bánh tráng + rau sống)","Lẩu hải sản","Bún tươi / mì tôm ăn lẩu","Cải xanh xào tỏi, cơm trắng, tráng miệng, trà đá"]},
-    {price:"245.000đ", dishes:["Gỏi bò trộn cải mầm","Vẹm xanh (hấp + nướng)","Chả ram tôm cuốn lá cải","Ốc hương hấp","Cá biển nướng saté / muối ớt","Lẩu gà lá giang","Bún tươi / mì tôm ăn lẩu","Rau sống + bánh tráng cuốn, tráng miệng, trà đá"]},
-    {price:"255.000đ", dishes:["Xìa hấp sả","Gỏi bò tái chanh","Gà ta nướng mật ong + xôi","Vẹm xanh (hấp + nướng)","Cá mú hấp xì dầu / thập cẩm","Cơm chiên dương châu","Rau sống + bánh tráng cuốn, cải xanh xào tỏi, tráng miệng, trà đá"]},
-    {price:"265.000đ", dishes:["Gà ta nướng mật ong + xôi","Gỏi hải sản","Tôm sú hấp dừa","Mực ống chiên tỏi","Lẩu hải sản","Cơm chiên hải sản","Bún tươi / mì tôm ăn lẩu","Rau xanh xào tỏi theo mùa, tráng miệng, trà đá"]},
-    {price:"275.000đ", dishes:["Xìa hấp sả","Gỏi hải sản","Tôm sú bỏ lò","Bê hấp tía tô","Cá biển nướng ngũ vị / saté / muối ớt","Vịt trời xào măng","Cơm chiên cá mặn","Bún tươi / mì tôm, rau sống + bánh tráng cuốn, tráng miệng, trà đá"]},
-    {price:"295.000đ", dishes:["Xìa hấp sả","Chả ram tôm","Sườn non nướng","Ghẹ xanh Sông Cầu hấp","Lẩu hải sản","Cơm chiên dương châu","Bún tươi / mì tôm ăn lẩu","Rau muống xào tỏi, tráng miệng, trà đá"]},
-    {price:"310.000đ", dishes:["Gỏi da bò","Xìa hấp sả","Hàu nướng phô mai","Gà ta nướng Tây Bắc","Bê hấp tía tô","Cá mú chiên xù sốt me","Sứa nước lèo + bún tươi / mì tôm","Rau xanh xào theo mùa, rau sống + bánh tráng cuốn, tráng miệng, trà đá"]},
-    {price:"325.000đ", dishes:["Gỏi bò tái chanh","Hàu sữa phô mai","Tôm bạc rang muối","Mực hấp","Cá mú chiên xù sốt me","Canh chua cá biển","Ba chỉ chấy cháy cạnh","Cơm trắng, rau tập tàng luộc / xào, rau sống + bánh tráng cuốn, tráng miệng, trà đá"]},
-    {price:"400.000đ", dishes:["Ngũ quả","Gà nướng mật ong","Ốc hương hấp","Vẹm xanh (hấp + nướng)","Tôm bạc sốc tỏi","Cá mú hấp xì dầu / thập cẩm","Vịt trời xào măng","Rau tập tàng luộc / xào, rau sống + bánh tráng cuốn, tráng miệng, trà đá"]}
-  ];
-  const FEATURED_PRICE = "225.000đ";
-  const CHECK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>';
-
-  const pkgGrid = document.getElementById('pkgGrid');
-  if (pkgGrid) {
-    PKG_DATA.forEach(pkg => {
-      const card = document.createElement('div');
-      card.className = 'pkg-card' + (pkg.price === FEATURED_PRICE ? ' featured' : '');
-      card.innerHTML = `<div class="pkg-name">${pkg.price} / khách</div>` +
-        `<div class="pkg-price">${pkg.price} <sub>/ khách</sub></div>` +
-        `<ul class="pkg-list">${pkg.dishes.map(d => `<li>${CHECK_SVG}${d}</li>`).join('')}</ul>` +
-        `<a class="btn btn-primary pkg-book" href="#dat-tiec-nhanh" data-price="${pkg.price}">Đặt gói này</a>`;
-      pkgGrid.appendChild(card);
-    });
-  }
-
-  /* ===== Lọc 16 mức giá thành 3 tầng ===== */
-  const giaSo = (txt) => parseInt(String(txt).replace(/[^0-9]/g, ''), 10);
-  const TIERS = {
-    'am-cung':     [135000, 185000],
-    'sum-vay':     [195000, 265000],
-    'trang-trong': [275000, 400000]
-  };
-  const filterWrap = document.getElementById('pkgFilter');
-  const countEl = document.getElementById('pkgCount');
-  if (filterWrap && pkgGrid) {
-    const cards = pkgGrid.querySelectorAll('.pkg-card');
-    cards.forEach((card, idx) => { card.dataset.gia = giaSo(PKG_DATA[idx].price); });
-    const locTang = (tier) => {
-      let hien = 0;
-      cards.forEach(card => {
-        const g = parseInt(card.dataset.gia, 10);
-        const r = TIERS[tier];
-        const ok = !r || (g >= r[0] && g <= r[1]);
-        card.style.display = ok ? '' : 'none';
-        if (ok) hien++;
-      });
-      if (countEl) {
-        countEl.textContent = 'Đang hiện ' + hien + ' trong tổng số ' + cards.length + ' mức giá';
-      }
-    };
-    filterWrap.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterWrap.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        locTang(btn.dataset.tier);
-      });
-    });
-    locTang('sum-vay');
-  }
-
-  /* ===== Máy tính chi phí tiệc ===== */
-  (function(){
-    const gEl = document.getElementById('calcGuests');
-    const gOut = document.getElementById('calcGuestsOut');
-    const pEl = document.getElementById('calcPkg');
-    const totalEl = document.getElementById('calcTotal');
-    const perEl = document.getElementById('calcPer');
-    const bookEl = document.getElementById('calcBook');
-    if (!gEl || !pEl || !totalEl) return;
-
-    PKG_DATA.forEach(pkg => {
-      const o = document.createElement('option');
-      o.value = pkg.price;
-      o.textContent = pkg.price + ' / khách';
-      if (pkg.price === FEATURED_PRICE) o.selected = true;
-      pEl.appendChild(o);
-    });
-
-    const tinh = () => {
-      const khach = parseInt(gEl.value, 10);
-      const donGia = giaSo(pEl.value);
-      gOut.textContent = khach + ' khách';
-      totalEl.textContent = (khach * donGia).toLocaleString('vi-VN') + 'đ';
-      perEl.textContent = khach + ' khách × ' + pEl.value + '/khách';
-    };
-    gEl.addEventListener('input', tinh);
-    pEl.addEventListener('change', tinh);
-
-    bookEl.addEventListener('click', () => {
-      const sel = document.getElementById('fpackage');
-      if (sel) {
-        sel.value = pEl.value + '/khách';
-        sel.dispatchEvent(new Event('change'));
-      }
-      const gInput = document.getElementById('fguests');
-      if (gInput) gInput.value = gEl.value;
-    });
-
-    tinh();
-  })();
-
-  const pkgSelect = document.getElementById('fpackage');
-  if (pkgSelect) {
-    PKG_DATA.forEach(pkg => {
-      const opt = document.createElement('option');
-      opt.value = pkg.price + '/khách';
-      opt.textContent = pkg.price + '/khách';
-      if (pkg.price === FEATURED_PRICE) opt.selected = true;
-      pkgSelect.appendChild(opt);
-    });
-    const optAsk = document.createElement('option');
-    optAsk.textContent = 'Chưa rõ, cần tư vấn';
-    pkgSelect.appendChild(optAsk);
-
-    const pkgPreview = document.getElementById('pkgPreview');
-    function updatePkgPreview(){
-      if (!pkgPreview) return;
-      const found = PKG_DATA.find(p => (p.price + '/khách') === pkgSelect.value);
-      if (found) {
-        pkgPreview.innerHTML = '<strong>Món trong set ' + found.price + '/khách:</strong>' +
-          '<ul class="pkg-preview-list">' + found.dishes.map(d => '<li>' + d + '</li>').join('') + '</ul>';
-      } else {
-        pkgPreview.textContent = 'Gọi hotline để được tư vấn set phù hợp.';
-      }
-    }
-    pkgSelect.addEventListener('change', updatePkgPreview);
-    updatePkgPreview();
-
-    // "Đặt gói này" — chọn sẵn đúng gói rồi cuộn tới form đặt tiệc nhanh
-    document.querySelectorAll('.pkg-book').forEach(link => {
-      link.addEventListener('click', () => {
-        pkgSelect.value = link.dataset.price + '/khách';
-        updatePkgPreview();
-      });
-    });
-  }
-
-  // Video reel (auto-playing photo slideshow)
-  (function(){
-    const slides = document.querySelectorAll('#reelSlides .reel-slide');
-    const dotsWrap = document.getElementById('reelDots');
-    const capEl = document.getElementById('reelCaption');
-    if(!slides.length || !dotsWrap) return;
-    slides.forEach((s, idx) => {
-      const d = document.createElement('span');
-      d.className = 'reel-dot' + (idx === 0 ? ' active' : '');
-      dotsWrap.appendChild(d);
-    });
-    const dots = dotsWrap.querySelectorAll('.reel-dot');
-    let i = 0;
-    let timer = null;
-    function show(n){
-      slides[i].classList.remove('active');
-      dots[i].classList.remove('active');
-      i = n;
-      slides[i].classList.add('active');
-      dots[i].classList.add('active');
-      if (capEl) capEl.textContent = slides[i].alt;
-    }
-    function restart(){
-      clearInterval(timer);
-      timer = setInterval(() => show((i + 1) % slides.length), 4500);
-    }
-    dots.forEach((d, idx) => {
-      d.setAttribute('role', 'button');
-      d.setAttribute('tabindex', '0');
-      d.setAttribute('aria-label', 'Xem ảnh ' + (idx + 1) + ': ' + slides[idx].alt);
-      d.style.cursor = 'pointer';
-      d.addEventListener('click', () => { show(idx); restart(); });
-      d.addEventListener('keydown', ev => {
-        if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); show(idx); restart(); }
-      });
-    });
-    const reelFrame = document.querySelector('.reel-frame');
-    if (reelFrame) {
-      reelFrame.addEventListener('mouseenter', () => clearInterval(timer));
-      reelFrame.addEventListener('mouseleave', restart);
-    }
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) { clearInterval(timer); } else { restart(); }
-    });
-    restart();
-  })();
-
-  /* =========================================================
-     NƠI NHẬN ĐƠN ĐẶT TIỆC
-     Dán link Web App của Google Apps Script vào giữa hai dấu nháy bên dưới.
-     Hướng dẫn lấy link: xem file google-apps-script-dat-tiec.gs
-     Để trống thì form vẫn chạy được, nhưng quán KHÔNG nhận được đơn tự động.
-     ========================================================= */
-  const BOOKING_ENDPOINT = "https://script.google.com/macros/s/AKfycbz2Z-08MKKZHziCHg50CJkJ4uyBIjeajDnTkWxG0TG2fMh9EoHX-2jn7JMpMur6YlGr/exec";
-
-  const form = document.getElementById('bookingForm');
-  const submitBtn = form.querySelector('.form-submit');
-  const hintEl = document.getElementById('bookingHint');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const name = data.get('fname');
-    const phone = data.get('fphone');
-    const date = data.get('fdate');
-    const guests = data.get('fguests');
-    const pkg = data.get('fpackage');
-    const note = data.get('fnote');
-
-    const dateLabel = date ? new Date(date).toLocaleString('vi-VN', { dateStyle: 'long', timeStyle: 'short' }) : 'chưa chọn';
-
-    // Mã đơn để khách và quán cùng đối chiếu khi gọi lại
-    const now = new Date();
-    const pad = (n) => String(n).padStart(2, '0');
-    const maDon = 'DGV-' + pad(now.getDate()) + pad(now.getMonth() + 1) + '-' +
-                  String(phone || '').replace(/\D/g, '').slice(-4);
-
-    document.getElementById('bookingCode').textContent = 'Mã đơn của bạn: ' + maDon;
-    document.getElementById('bookingSummary').textContent =
-      `${name} · ${phone}\nThời gian: ${dateLabel}\nSố khách: ${guests} — ${pkg}` + (note ? `\nGhi chú: ${note}` : '');
-
-    const tinNhan = `Xin chào Đồng Gia Viên, tôi muốn đặt tiệc:\nMã đơn: ${maDon}\nHọ tên: ${name}\nSĐT: ${phone}\nThời gian: ${dateLabel}\nSố khách: ${guests}\nGói: ${pkg}${note ? '\nGhi chú: ' + note : ''}`;
-
-    // Đếm đơn trong Google Analytics (chỉ chạy khi đã gắn mã GA)
-    if (typeof gtag === 'function') {
-      gtag('event', 'dat_tiec', { so_khach: guests, goi_tiec: pkg, ma_don: maDon });
-    }
-
-    // 1) Gửi đơn về Google Sheet của quán
-    if (BOOKING_ENDPOINT) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Đang gửi...';
-      fetch(BOOKING_ENDPOINT, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify({
-          maDon: maDon,
-          name: name, phone: phone, date: dateLabel, dateRaw: date,
-          guests: guests, pkg: pkg, note: note || '', trang: location.href
-        })
-      })
-      .catch(() => {})
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Gửi cho quán — quán gọi lại trong 15 phút';
-      });
-    } else {
-      console.warn('[Đồng Gia Viên] CHƯA dán link Google Apps Script vào BOOKING_ENDPOINT — đơn đặt tiệc KHÔNG chạy về quán.');
-    }
-
-    // 2) Copy sẵn nội dung để khách dán thẳng vào Zalo (link zalo.me không nhận tin soạn sẵn)
-    document.getElementById('zaloLink').href = 'https://zalo.me/0931794488';
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(tinNhan).then(() => {
-        if (hintEl) hintEl.textContent = 'Đã copy sẵn nội dung đặt tiệc — bấm "Nhắn Zalo" rồi dán (Ctrl+V hoặc giữ để Dán) là gửi được ngay.';
-      }).catch(() => {
-        if (hintEl) hintEl.textContent = 'Quán sẽ gọi lại để xác nhận. Cần gấp thì bấm "Gọi ngay" giúp quán nhé.';
-      });
-    } else if (hintEl) {
-      hintEl.textContent = 'Quán sẽ gọi lại để xác nhận. Cần gấp thì bấm "Gọi ngay" giúp quán nhé.';
-    }
-
-    document.getElementById('bookingResult').classList.add('show');
-    document.getElementById('bookingResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
-
-  /* ---- Đếm các cú bấm quan trọng (chỉ chạy khi đã gắn mã Google Analytics) ---- */
-  document.addEventListener('click', (e) => {
-    const a = e.target.closest('a');
-    if (!a || typeof gtag !== 'function') return;
-    const href = a.getAttribute('href') || '';
-    let ten = '';
-    if (href.startsWith('tel:')) ten = 'bam_goi_dien';
-    else if (href.includes('zalo.me')) ten = 'bam_zalo';
-    else if (href.includes('m.me') || href.includes('messenger')) ten = 'bam_messenger';
-    else if (href.includes('facebook.com')) ten = 'bam_facebook';
-    else if (href.includes('maps')) ten = 'bam_chi_duong';
-    if (ten) gtag('event', ten, { vi_tri: a.dataset.track || a.className || 'khac' });
-  }, { passive: true });
-</script>
-
+<script src="assets/app.js"></script>
 </body>
 </html>

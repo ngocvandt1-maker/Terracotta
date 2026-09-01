@@ -1,0 +1,13 @@
+<script>
+  /* Link cũ dạng trang-chu/#menu vẫn dùng được: đưa khách sang đúng trang mới */
+  (function(){
+    var map = {
+      '#home': '/', '#menu': '/thuc-don', '#dat-tiec': '/dat-tiec',
+      '#dat-tiec-nhanh': '/dat-tiec#dat-tiec-nhanh', '#gioi-thieu': '/gioi-thieu',
+      '#khoanh-khac': '/gioi-thieu#khoanh-khac', '#khu-tre-em': '/khu-tre-em',
+      '#lien-he': '/lien-he', '#cau-hoi': '/lien-he#cau-hoi'
+    };
+    var dich = map[location.hash];
+    if (dich && dich !== '/') location.replace(dich);
+  })();
+</script>
