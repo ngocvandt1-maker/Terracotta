@@ -51,6 +51,8 @@ EOF
   cat gioi-thieu.html
   cat div-to-bg.html
   cat khoanh-khac.html
+  cat div-to-surface.html
+  cat bai-do-xe.html
   echo '</main>'; echo
   cat footer.html; echo
   cat float.html; echo
@@ -101,6 +103,21 @@ EOF
   cat float.html; echo
   cat _tail.tpl
 } > "$OUT/khu-tre-em.html"
+
+# ---------- PHÒNG VIP ----------
+{
+  mkhead "Phòng VIP và sảnh tiệc Đồng Gia Viên — Có karaoke, sảnh đến 200 khách" \
+         "Phòng VIP có karaoke tại Đồng Gia Viên Quy Nhơn: miễn phí cho nhóm trên 15 khách, 300.000đ mỗi giờ cho nhóm dưới 10 khách. Sảnh lớn phục vụ đến khoảng 200 khách, sảnh vừa cho 25 đến 50 khách." \
+         "Phòng VIP và sảnh tiệc Đồng Gia Viên — Có karaoke" "/phong-vip"
+  echo '</head>'; echo '<body>'; echo
+  cat header.html; echo; echo '<main>'
+  crumbs "Phòng VIP" "/phong-vip"
+  cat phong-vip.html
+  echo '</main>'; echo
+  cat footer.html; echo
+  cat float.html; echo
+  cat _tail.tpl
+} > "$OUT/phong-vip.html"
 
 # ---------- LIÊN HỆ ----------
 {

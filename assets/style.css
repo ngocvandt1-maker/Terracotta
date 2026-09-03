@@ -122,7 +122,7 @@
   }
   .nav{display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:20px; padding:12px 0;}
   .brand{grid-column:1; display:flex; align-items:center; gap:10px; text-decoration:none;}
-  .brand-mark{width:42px; height:42px; flex:none; border-radius:38% 62% 55% 45% / 45% 55% 45% 55%; object-fit:cover; background:#fff; border:2px solid var(--marigold);}
+  .brand-mark{width:42px; height:42px; flex:none; border-radius:50%; object-fit:cover; background:#fff; border:none;}
   .brand-text{font-family:"Baloo 2", sans-serif; font-weight:700; font-size:1.2rem; color:var(--clay-deep); white-space:nowrap;}
   .brand-text span{display:block; font-family:"Be Vietnam Pro",sans-serif; font-weight:600; font-size:0.6rem; letter-spacing:0.16em; color:var(--ink-soft); text-transform:uppercase;}
   nav.links{grid-column:2; display:flex; align-items:center; justify-content:center; gap:34px;}
@@ -583,12 +583,32 @@
     .footer-company{grid-column:1/-1; order:-1;}
   }
   @media (max-width: 1180px){
-    nav.links{gap:22px;}
-    nav.links a{font-size:0.96rem;}
+    nav.links{gap:18px;}
+    nav.links a{font-size:0.94rem;}
+    .brand-text{font-size:1.06rem;}
+    .brand-mark{width:36px; height:36px;}
+    .call-chip .chip-long{display:none;}
+    .call-chip .chip-short{display:inline;}
   }
   @media (max-width: 980px){
-    nav.links{gap:16px;}
-    nav.links a{font-size:0.92rem;}
+    /* 6 mục không đủ chỗ trên một hàng ngang -> chuyển sang menu ☰ sớm hơn */
+    .brand-text{font-size:0.98rem; overflow:hidden; text-overflow:ellipsis;}
+    .nav-actions{gap:7px;}
+    .call-chip{padding:10px 14px;}
+    .nav{grid-template-columns:minmax(0,1fr) auto;}
+    .brand{grid-column:1; min-width:0;}
+    .nav-actions{grid-column:2;}
+    nav.links{
+      grid-column:1 / -1;
+      position:absolute; top:calc(100% + 22px); left:16px; right:16px; background:var(--surface);
+      border:2px solid var(--line); border-radius:24px; padding:14px;
+      flex-direction:column; align-items:stretch; gap:4px;
+      box-shadow:0 20px 40px -20px hsl(var(--shadow)/0.5);
+      transform:translateY(-12px); opacity:0; pointer-events:none; transition:.2s ease;
+    }
+    nav.links.open{transform:none; opacity:1; pointer-events:auto;}
+    nav.links a{padding:12px 14px; font-size:1rem;}
+    .burger{display:block;}
   }
   @media (max-width: 720px){
     /* Thanh đầu trang gọn trong màn hẹp: tên quán co được, nút luôn nằm bên phải */
@@ -807,4 +827,332 @@
     .gio-actions .btn{flex:1 1 0; justify-content:center;}
     .menu-item{flex-wrap:wrap;}
     .mon-pick{margin-left:auto;}
+  }
+
+  /* ---------- Phòng VIP & sảnh tiệc ---------- */
+  .karaoke{
+    background:var(--espresso); color:#f5ebde; border-radius:30px;
+    padding:30px 32px; margin:30px 0 34px;
+    display:grid; grid-template-columns:0.95fr 1.05fr; gap:32px; align-items:center;
+  }
+  .karaoke h3{color:var(--marigold-soft); font-size:1.6rem;}
+  .karaoke-eyebrow{color:var(--marigold);}
+  .karaoke-lead{font-size:0.96rem; color:#d9c9b3; margin-top:10px;}
+  .karaoke-tiers{list-style:none; margin:0; padding:0; display:grid; gap:12px;}
+  .karaoke-tiers li{
+    background:#2c2016; border:2px solid #47372a; border-radius:18px;
+    padding:14px 18px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+  }
+  .karaoke-tiers b{font-size:0.92rem; color:#f5ebde; flex:1 1 130px;}
+  .karaoke-tiers small{flex:1 1 100%; font-size:0.79rem; color:#bfae97;}
+  .tier-price{
+    font-family:"Baloo 2",sans-serif; font-weight:800; font-size:1.35rem;
+    color:var(--marigold-soft); line-height:1.1; white-space:nowrap;
+  }
+  .tier-price i{font-style:normal; font-size:0.82rem; font-weight:700; color:#bfae97;}
+  .karaoke-tiers .tier-free{border-color:var(--marigold); background:#33240f;}
+  .karaoke-tiers .tier-free .tier-price{color:var(--marigold); font-size:1.55rem;}
+  .karaoke-tiers .tier-ask .tier-price{font-size:1.1rem; color:#d9c9b3;}
+
+  .room-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:24px;}
+  .room-card{
+    background:var(--surface); border:2px solid var(--line); border-radius:26px;
+    overflow:hidden; display:flex; flex-direction:column;
+    box-shadow:0 18px 34px -26px hsl(var(--shadow)/0.5);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .room-card:hover{transform:translateY(-4px); box-shadow:0 26px 46px -26px hsl(var(--shadow)/0.6);}
+  .room-card img{width:100%; height:auto; aspect-ratio:4/3; object-fit:cover;}
+  .room-body{padding:18px 20px 22px; display:flex; flex-direction:column; gap:8px;}
+  .room-cap{
+    align-self:flex-start; font-size:0.72rem; font-weight:800; letter-spacing:0.08em;
+    text-transform:uppercase; color:#fff8ec; background:var(--clay);
+    padding:5px 12px; border-radius:999px;
+  }
+  .room-body h3{font-size:1.18rem;}
+  .room-body p{font-size:0.92rem; color:var(--ink-soft);}
+  .room-note{text-align:center; max-width:62ch; margin-left:auto; margin-right:auto;}
+  .room-cta{justify-content:center;}
+
+  @media (max-width: 900px){
+    .karaoke{grid-template-columns:1fr; padding:26px 22px; gap:22px;}
+  }
+  @media (max-width: 640px){
+    .room-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Thanh đầu trang kiểu logo lớn + menu giữa ---------- */
+  /* Khung logo tròn, 2 viền dày mỏng khác nhau:
+     - viền ngoài DÀY màu xanh rêu (cùng tông chữ trong logo -> chữ nổi hẳn lên)
+     - viền trong MỎNG màu vàng nghệ (tách logo khỏi viền ngoài) */
+  .brand-mark-wrap{
+    position:relative; display:inline-block; flex:none; line-height:0;
+    border-radius:50%;
+    overflow:hidden;
+    border:5px solid var(--jade);
+    padding:3px;
+    background:var(--marigold);
+    box-shadow:0 10px 20px -10px hsl(var(--shadow)/0.6);
+    animation:logoGlow 2.1s ease-in-out infinite;
+  }
+  /* Mặt kính lồi: sáng ở góc trên trái, tối dần ở mép dưới -> nổi khối như gương lồi */
+  .brand-mark-wrap::before{
+    content:""; position:absolute; z-index:2; inset:3px;
+    border-radius:50%; pointer-events:none;
+    background:
+      radial-gradient(115% 85% at 30% 16%,
+        rgba(255,255,255,0.68) 0%,
+        rgba(255,255,255,0.32) 24%,
+        rgba(255,255,255,0.08) 44%,
+        rgba(255,255,255,0) 62%),
+      radial-gradient(90% 70% at 50% 112%,
+        rgba(255,255,255,0.26) 0%,
+        rgba(255,255,255,0) 45%);
+    box-shadow:
+      inset 0 5px 10px -5px rgba(255,255,255,0.95),
+      inset 0 -9px 16px -7px rgba(60,35,18,0.45),
+      inset 0 0 0 1px rgba(255,255,255,0.30);
+  }
+  /* Tia sáng loé ngang qua logo */
+  .brand-mark-wrap::after{
+    content:""; position:absolute; z-index:3;
+    top:-60%; left:-130%; width:52%; height:220%;
+    background:linear-gradient(100deg,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.30) 30%,
+      rgba(255,255,255,0.98) 50%,
+      rgba(255,255,255,0.30) 70%,
+      rgba(255,255,255,0) 100%);
+    transform:rotate(18deg);
+    pointer-events:none;
+    animation:logoShine 2.1s ease-in-out infinite;
+  }
+  @keyframes logoShine{
+    0%   { left:-130%; }
+    30%  { left:150%; }
+    100% { left:150%; }
+  }
+  /* Quầng sáng loé cùng lúc với tia sáng cho logo bật lên */
+  @keyframes logoGlow{
+    0%, 4%   { box-shadow:0 10px 20px -10px hsl(var(--shadow)/0.6); }
+    15%      { box-shadow:0 10px 20px -10px hsl(var(--shadow)/0.6),
+                          0 0 20px 3px rgba(232,162,48,0.85); }
+    30%,100% { box-shadow:0 10px 20px -10px hsl(var(--shadow)/0.6); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .brand-mark-wrap::after{animation:none; opacity:0;}
+    .brand-mark-wrap{animation:none;}
+  }
+  /* Màn hẹp: logo nhỏ nên viền mảnh lại cho cân */
+  @media (max-width: 980px){
+    .brand-mark-wrap{border-width:3px; padding:2px;}
+    .brand-mark-wrap::before{inset:2px;}
+  }
+
+  /* Màn rộng: logo 100px, menu 18px, cách nhau 38px, thanh cao 104px */
+  @media (min-width: 1181px){
+    .nav{min-height:104px; padding:2px 0;}
+    .brand-mark{width:84px; height:84px;}
+    .brand-text{display:none;}
+    nav.links{gap:38px;}
+    nav.links a{font-size:18px;}
+  }
+  /* Màn vừa: thu nhỏ theo tỉ lệ cho khỏi tràn */
+  @media (min-width: 981px) and (max-width: 1180px){
+    .nav{min-height:96px; padding:6px 0;}
+    .brand-mark{width:68px; height:68px;}
+    .brand-text{display:none;}
+    nav.links{gap:26px;}
+    nav.links a{font-size:16px;}
+  }
+
+  /* ---------- Dải ảnh thêm của sảnh tiệc ---------- */
+  .room-gallery-title{text-align:center; margin-top:36px;}
+  .room-gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:12px;}
+  .room-gallery img{
+    width:100%; height:auto; aspect-ratio:4/3; object-fit:cover;
+    border-radius:22px; border:3px solid var(--surface);
+    box-shadow:0 18px 34px -26px hsl(var(--shadow)/0.5);
+  }
+  @media (max-width: 640px){
+    .room-gallery{grid-template-columns:1fr 1fr; gap:12px;}
+  }
+
+  /* ---------- Chữ menu nổi khối + tia sáng chạy qua ---------- */
+  /* Chữ nổi: bắt sáng ở mép trên, đổ bóng xuống dưới -> chữ gồ lên khỏi mặt thanh */
+  nav.links a,
+  .brand-text{
+    text-shadow:
+      0 -1px 0 rgba(255,255,255,0.92),
+      0 1px 1px rgba(92,62,38,0.34),
+      0 3px 6px rgba(60,35,18,0.18);
+  }
+  /* Tia sáng loé chạy lần lượt qua từng mục, nối tiếp tia sáng của logo */
+  @keyframes chuLoe{
+    0%, 12%  { text-shadow:
+                 0 -1px 0 rgba(255,255,255,0.92),
+                 0 1px 1px rgba(92,62,38,0.34),
+                 0 3px 6px rgba(60,35,18,0.18); }
+    17%, 21% { text-shadow:
+                 0 -1px 0 rgba(255,255,255,1),
+                 0 1px 1px rgba(92,62,38,0.28),
+                 0 3px 6px rgba(60,35,18,0.14),
+                 0 0 4px rgba(255,236,196,1),
+                 0 0 9px rgba(232,162,48,1),
+                 0 0 18px rgba(232,162,48,0.85),
+                 0 0 30px rgba(232,162,48,0.45); }
+    30%,100% { text-shadow:
+                 0 -1px 0 rgba(255,255,255,0.92),
+                 0 1px 1px rgba(92,62,38,0.34),
+                 0 3px 6px rgba(60,35,18,0.18); }
+  }
+  /* Chỉ chạy trên thanh ngang (màn rộng); màn hẹp menu là danh sách dọc nên bỏ */
+  @media (min-width: 981px){
+    nav.links a{animation:chuLoe 2.1s ease-in-out infinite;}
+    nav.links a:nth-child(1){animation-delay:0.17s;}
+    nav.links a:nth-child(2){animation-delay:0.215s;}
+    nav.links a:nth-child(3){animation-delay:0.26s;}
+    nav.links a:nth-child(4){animation-delay:0.305s;}
+    nav.links a:nth-child(5){animation-delay:0.35s;}
+    nav.links a:nth-child(6){animation-delay:0.395s;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    nav.links a{animation:none;}
+  }
+
+  /* ---------- Lưới nhóm món trên trang thực đơn ---------- */
+  .cat-grid-hint{text-align:center; font-size:0.9rem; color:var(--ink-soft); margin:0 0 16px;}
+  .cat-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:18px;
+    margin:0 0 38px;
+  }
+  .cat-card{
+    display:block; border-radius:20px; overflow:hidden; text-decoration:none;
+    background:var(--surface); border:2px solid var(--line);
+    box-shadow:0 16px 30px -24px hsl(var(--shadow)/0.5);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .cat-card:hover{transform:translateY(-4px); box-shadow:0 24px 40px -22px hsl(var(--shadow)/0.6);}
+  .cat-card img{
+    display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover;
+    transition:transform .35s ease;
+  }
+  .cat-card:hover img{transform:scale(1.06);}
+  /* Nhóm chưa có ảnh: ô nền màu thương hiệu + icon, thay ảnh sau là xong */
+  .cat-thumb{
+    display:flex; align-items:center; justify-content:center;
+    width:100%; aspect-ratio:1/1;
+    background:linear-gradient(150deg, var(--marigold-soft) 0%, var(--clay) 100%);
+    color:#fff8ec;
+  }
+  .cat-thumb svg{width:42%; height:42%; opacity:0.9;}
+  .cat-name{
+    display:block; background:var(--clay); color:#fff8ec;
+    font-family:"Baloo 2", sans-serif; font-weight:700; font-size:0.98rem;
+    text-align:center; padding:11px 10px; line-height:1.25;
+  }
+  .cat-card:hover .cat-name{background:var(--clay-deep);}
+  /* Chừa chỗ cho thanh đầu trang khi nhảy tới nhóm món */
+  .menu-cat{scroll-margin-top:120px;}
+
+  @media (max-width: 900px){
+    .cat-grid{grid-template-columns:repeat(3, 1fr); gap:14px;}
+    .cat-name{font-size:0.92rem;}
+  }
+  @media (max-width: 640px){
+    .cat-grid{grid-template-columns:repeat(2, 1fr); gap:12px;}
+    .cat-name{font-size:0.85rem; padding:9px 7px;}
+    .menu-cat{scroll-margin-top:86px;}
+  }
+
+  /* ---------- Bãi đỗ xe ---------- */
+  #bai-do-xe{background:var(--surface);}
+  .park-grid{display:grid; grid-template-columns:300px 1fr; gap:30px; align-items:start;}
+  .park-video{margin:0;}
+  .park-video video{
+    width:100%; height:auto; aspect-ratio:9/16; display:block;
+    background:#12100e; border-radius:26px; border:3px solid var(--bg-deep);
+    box-shadow:0 24px 44px -28px hsl(var(--shadow)/0.65);
+  }
+  .park-video figcaption{
+    margin-top:10px; text-align:center; font-size:0.85rem; color:var(--ink-soft);
+  }
+  .park-shots{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+  .park-shots img{
+    width:100%; height:auto; aspect-ratio:3/4; object-fit:cover;
+    border-radius:20px; border:3px solid var(--bg-deep);
+    box-shadow:0 18px 32px -26px hsl(var(--shadow)/0.55);
+  }
+  .park-list{margin-top:22px;}
+
+  @media (max-width: 900px){
+    .park-grid{grid-template-columns:1fr; gap:24px;}
+    .park-video{max-width:290px; margin:0 auto;}
+  }
+  @media (max-width: 640px){
+    .park-shots{grid-template-columns:1fr 1fr; gap:12px;}
+  }
+
+  /* ---------- Hiệu ứng cho 2 nút Gọi và Zalo ---------- */
+  /* Cùng nhịp 4,2s với logo và chữ menu -> ánh sáng chạy liền một mạch
+     từ logo, qua hàng chữ, rồi tới hai nút này */
+  .nav-actions .call-chip{
+    position:relative; overflow:hidden;
+    transition:transform .18s ease, background .18s ease, box-shadow .25s ease;
+    animation:nutSang 2.1s ease-in-out infinite;
+  }
+  .nav-actions .call-chip:not(.zalo-chip){animation-delay:0.44s;}
+  .nav-actions .zalo-chip{animation-delay:0.485s;}
+  .nav-actions .call-chip:hover{transform:translateY(-2px);}
+
+  /* Tia sáng quét chéo qua mặt nút */
+  .nav-actions .call-chip::after{
+    content:""; position:absolute; z-index:1; pointer-events:none;
+    top:-70%; left:-140%; width:45%; height:240%;
+    background:linear-gradient(100deg,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.25) 32%,
+      rgba(255,255,255,0.85) 50%,
+      rgba(255,255,255,0.25) 68%,
+      rgba(255,255,255,0) 100%);
+    transform:rotate(18deg);
+    animation:nutQuetSang 2.1s ease-in-out infinite;
+  }
+  .nav-actions .call-chip:not(.zalo-chip)::after{animation-delay:0.44s;}
+  .nav-actions .zalo-chip::after{animation-delay:0.485s;}
+  /* Chữ và icon nằm trên tia sáng */
+  .nav-actions .call-chip svg,
+  .nav-actions .call-chip span{position:relative; z-index:2;}
+
+  @keyframes nutQuetSang{
+    0%   { left:-140%; }
+    26%  { left:160%; }
+    100% { left:160%; }
+  }
+  /* Quầng sáng bật lên đúng lúc tia đi qua */
+  @keyframes nutSang{
+    0%, 6%   { box-shadow:0 0 0 0 rgba(232,162,48,0); }
+    16%      { box-shadow:0 0 16px 2px rgba(232,162,48,0.9),
+                          0 6px 14px -8px hsl(var(--shadow)/0.5); }
+    30%,100% { box-shadow:0 0 0 0 rgba(232,162,48,0); }
+  }
+  /* Icon điện thoại rung nhẹ như đang đổ chuông, đúng lúc loé */
+  .nav-actions .call-chip:not(.zalo-chip) svg{
+    animation:chuongRung 2.1s ease-in-out infinite;
+    animation-delay:0.44s;
+    transform-origin:50% 60%;
+  }
+  @keyframes chuongRung{
+    0%, 8%    { transform:rotate(0deg); }
+    11%       { transform:rotate(-13deg); }
+    14%       { transform:rotate(11deg); }
+    17%       { transform:rotate(-8deg); }
+    20%       { transform:rotate(6deg); }
+    24%, 100% { transform:rotate(0deg); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .nav-actions .call-chip,
+    .nav-actions .call-chip::after,
+    .nav-actions .call-chip:not(.zalo-chip) svg{animation:none;}
+    .nav-actions .call-chip::after{opacity:0;}
   }

@@ -47,13 +47,16 @@
 <header id="top">
   <div class="wrap nav">
     <a class="brand" href="/">
-      <img class="brand-mark" src="images/logo.jpg" width="206" height="206" decoding="async" alt="Logo Đồng Gia Viên">
+      <span class="brand-mark-wrap">
+        <img class="brand-mark" src="images/logo.jpg" width="206" height="206" decoding="async" alt="Logo Đồng Gia Viên">
+      </span>
       <span class="brand-text">Đồng Gia Viên Restaurant</span>
     </a>
     <nav class="links" id="navLinks">
       <a href="/">Trang chủ</a>
       <a href="/thuc-don">Thực đơn</a>
       <a href="/dat-tiec">Đặt tiệc</a>
+      <a href="/phong-vip">Phòng VIP</a>
       <a href="/gioi-thieu">Giới thiệu</a>
       <a href="/lien-he">Liên hệ</a>
     </nav>
@@ -123,7 +126,103 @@
       </div>
 
       <div class="menu-panel active" id="tab-chinh">
-        <div class="menu-cat">
+
+        <p class="cat-grid-hint">Bấm vào nhóm món để xem đầy đủ tên món và giá.</p>
+        <div class="cat-grid">
+
+          <a class="cat-card" href="#nhom-rau-cu">
+            <span class="cat-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C7 6 4 10 4 14a8 8 0 0 0 16 0c0-4-3-8-8-12Z"/><path d="M12 22V9"/></svg></span>
+            <span class="cat-name">Rau củ quả</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-goi">
+            <img src="images/goi-ca-ngu-trung-cut.jpg" width="495" height="1100" loading="lazy" decoding="async" alt="Gỏi cá ngừ trứng cút Đồng Gia Viên">
+            <span class="cat-name">Gỏi</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-khai-vi">
+            <span class="cat-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3v8a3 3 0 0 0 3 3v7M7 3v6M10 3v6M17 3c-1.5 2-2 4-2 6s.5 3 2 3v9"/></svg></span>
+            <span class="cat-name">Khai vị</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-an-nhanh">
+            <img src="images/nhom-an-nhanh.jpg" width="700" height="525" loading="lazy" decoding="async" alt="Món chiên giòn Đồng Gia Viên">
+            <span class="cat-name">Ăn nhanh</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-tom">
+            <img src="images/nhom-tom.jpg" width="700" height="525" loading="lazy" decoding="async" alt="Tôm sốt Thái Đồng Gia Viên">
+            <span class="cat-name">Tôm</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-muc">
+            <span class="cat-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12c3-4.5 7-6.5 11-6.5S20 8 22 12c-2 4-5 6.5-9 6.5S5 16.5 2 12Z"/><circle cx="17" cy="11" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <span class="cat-name">Mực</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-com">
+            <img src="images/nhom-com.jpg" width="525" height="700" loading="lazy" decoding="async" alt="Cơm chiên tôm Đồng Gia Viên">
+            <span class="cat-name">Cơm</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-mi">
+            <img src="images/nhom-mi.jpg" width="525" height="700" loading="lazy" decoding="async" alt="Mì xào sốt thịt bằm Đồng Gia Viên">
+            <span class="cat-name">Mì</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-chao">
+            <img src="images/nhom-chao.jpg" width="529" height="700" loading="lazy" decoding="async" alt="Cháo hải sản Đồng Gia Viên">
+            <span class="cat-name">Cháo &amp; món lòng gà</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-ga">
+            <img src="images/nhom-ga.jpg" width="700" height="664" loading="lazy" decoding="async" alt="Mẹt gà ba món Đồng Gia Viên">
+            <span class="cat-name">Gà</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-tho">
+            <span class="cat-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18h18"/><path d="M5 18a7 7 0 0 1 14 0"/><path d="M12 6.5V8"/><circle cx="12" cy="5" r="1.2"/></svg></span>
+            <span class="cat-name">Thỏ</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-be">
+            <img src="images/nhom-be.jpg" width="525" height="700" loading="lazy" decoding="async" alt="Bê xào sốt tiêu Đồng Gia Viên">
+            <span class="cat-name">Bê</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-heo">
+            <img src="images/nhom-heo-be.jpg" width="525" height="700" loading="lazy" decoding="async" alt="Heo quay da giòn Đồng Gia Viên">
+            <span class="cat-name">Heo &amp; dê</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-ca">
+            <img src="images/nhom-ca.jpg" width="532" height="700" loading="lazy" decoding="async" alt="Cá hồi áp chảo Đồng Gia Viên">
+            <span class="cat-name">Cá</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-lau">
+            <span class="cat-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-6Z"/><path d="M2 10h20M9 6c0-1 1-1.5 1-2.5M15 6c0-1-1-1.5-1-2.5"/></svg></span>
+            <span class="cat-name">Lẩu</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-um-ham">
+            <img src="images/nhom-um-ham.jpg" width="604" height="700" loading="lazy" decoding="async" alt="Bò kho cà rốt Đồng Gia Viên">
+            <span class="cat-name">Món um, hầm</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-best-seller">
+            <span class="cat-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 2.8 2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.6l-5.6 3.3 1.4-6.3L3 9.3l6.4-.6L12 2.8Z"/></svg></span>
+            <span class="cat-name">Best seller</span>
+          </a>
+
+          <a class="cat-card" href="#nhom-nuoc-uong">
+            <span class="cat-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12l-1.5 8.5a4 4 0 0 1-4 3.5h-1a4 4 0 0 1-4-3.5L6 3Z"/><path d="M12 15v6M8 21h8"/></svg></span>
+            <span class="cat-name">Nước giải khát &amp; Bia</span>
+          </a>
+
+        </div>
+
+        <div class="menu-cat" id="nhom-rau-cu">
           <h4>Rau củ quả</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Ngũ quả kho quẹt</div></div><div class="price">65k/đĩa</div></div>
@@ -134,16 +233,18 @@
             <div class="menu-item"><div><div class="name">Đậu bắp luộc</div></div><div class="price">45k/đĩa</div></div>
           </div>
         </div>
-        <div class="menu-cat">
-          <h4>Gỏi, khai vị, ăn nhanh</h4>
+        <div class="menu-cat" id="nhom-goi">
+          <h4>Gỏi</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Gỏi bò bóp thấu</div></div><div class="price">85k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Gỏi hải sản</div></div><div class="price">95k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Gỏi da bò trộn măng Tây Sơn</div></div><div class="price">65k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Gỏi sứa trộn</div></div><div class="price">85k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Đậu hũ chiên</div></div><div class="price">45k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Khoai lang chiên</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Khoai tây chiên</div></div><div class="price">55k/đĩa</div></div>
+          </div>
+        </div>
+        <div class="menu-cat" id="nhom-khai-vi">
+          <h4>Khai vị</h4>
+          <div class="menu-list">
             <div class="menu-item"><div><div class="name">Chả ram tôm</div></div><div class="price">65k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Dồi sụn chiên</div></div><div class="price">65k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Dồi dê nướng</div></div><div class="price">79k/đĩa</div></div>
@@ -152,19 +253,32 @@
             <div class="menu-item"><div><div class="name">Lươn xào sả ớt</div></div><div class="price">75k</div></div>
           </div>
         </div>
-        <div class="menu-cat">
-          <h4>Mực, tôm, ốc</h4>
+        <div class="menu-cat" id="nhom-an-nhanh">
+          <h4>Ăn nhanh</h4>
+          <div class="menu-list">
+            <div class="menu-item"><div><div class="name">Đậu hũ chiên</div></div><div class="price">45k/đĩa</div></div>
+            <div class="menu-item"><div><div class="name">Khoai lang chiên</div></div><div class="price">65k/đĩa</div></div>
+            <div class="menu-item"><div><div class="name">Khoai tây chiên</div></div><div class="price">55k/đĩa</div></div>
+          </div>
+        </div>
+        <div class="menu-cat" id="nhom-tom">
+          <h4>Tôm</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Tôm bạc hấp</div></div><div class="price">95k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Tôm sốt Thái</div></div><div class="price">125k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Tôm sú</div></div><div class="price">450k/kg</div></div>
+          </div>
+        </div>
+        <div class="menu-cat" id="nhom-muc">
+          <h4>Mực</h4>
+          <div class="menu-list">
             <div class="menu-item"><div><div class="name">Mực nang hấp hành cần</div></div><div class="price">129k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Mực nang chiên tỏi</div></div><div class="price">129k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Mực cơm chiên tỏi</div></div><div class="price">95k/đĩa</div></div>
           </div>
         </div>
-        <div class="menu-cat">
-          <h4>Cơm, mì, cháo</h4>
+        <div class="menu-cat" id="nhom-com">
+          <h4>Cơm</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Cơm lam</div></div><div class="price">20k/ống</div></div>
             <div class="menu-item"><div><div class="name">Cơm trắng</div></div><div class="price">20k/tô</div></div>
@@ -173,17 +287,27 @@
             <div class="menu-item"><div><div class="name">Cơm chiên hải sản</div></div><div class="price">79k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Cơm chiên dưa bò</div></div><div class="price">65k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Cơm chiên thập cẩm</div></div><div class="price">65k/đĩa</div></div>
-            <div class="menu-item"><div><div class="name">Cháo hải sản</div></div><div class="price">79k/tô</div></div>
+          </div>
+        </div>
+        <div class="menu-cat" id="nhom-mi">
+          <h4>Mì</h4>
+          <div class="menu-list">
             <div class="menu-item"><div><div class="name">Mì xào bò</div></div><div class="price">69k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Mì xào hải sản</div></div><div class="price">79k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Mì xào rau</div></div><div class="price">45k/đĩa</div></div>
+          </div>
+        </div>
+        <div class="menu-cat" id="nhom-chao">
+          <h4>Cháo &amp; món lòng gà</h4>
+          <div class="menu-list">
+            <div class="menu-item"><div><div class="name">Cháo hải sản</div></div><div class="price">79k/tô</div></div>
             <div class="menu-item"><div><div class="name">Lòng gà nấu xôi</div></div><div class="price">59k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Lòng gà nấu miến</div></div><div class="price">55k/tô</div></div>
             <div class="menu-item"><div><div class="name">Lòng gà xào miến</div></div><div class="price">65k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Lòng gà xào mướp</div></div><div class="price">55k/đĩa</div></div>
           </div>
         </div>
-        <div class="menu-cat">
+        <div class="menu-cat" id="nhom-ga">
           <h4>Gà (không kèm lòng)</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Gà tre hấp mắm</div></div><div class="price">230k/con</div></div>
@@ -202,7 +326,7 @@
           </div>
           <p class="menu-note">Gà đá, vịt xiêm vui lòng đặt trước.</p>
         </div>
-        <div class="menu-cat">
+        <div class="menu-cat" id="nhom-tho">
           <h4>Thỏ — món nguyên con <span style="font-weight:500; text-transform:none; font-size:0.8rem;">(179k/kg)</span></h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Thỏ ủ trấu (150 phút)</div></div><div class="price">179k/kg</div></div>
@@ -210,13 +334,18 @@
             <div class="menu-item"><div><div class="name">Thỏ các món (tiết canh/nướng/xào lăn/hấp)</div></div><div class="price">179k/kg</div></div>
           </div>
         </div>
-        <div class="menu-cat">
-          <h4>Heo, bê</h4>
+        <div class="menu-cat" id="nhom-be">
+          <h4>Bê</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Bê hấp tía tô</div></div><div class="price">95k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Bê nướng mắm nhĩ / muối ớt</div></div><div class="price">95k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Bê xào sả ớt</div></div><div class="price">95k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Bê xào lăn</div></div><div class="price">95k/đĩa</div></div>
+          </div>
+        </div>
+        <div class="menu-cat" id="nhom-heo">
+          <h4>Heo &amp; dê</h4>
+          <div class="menu-list">
             <div class="menu-item"><div><div class="name">Ba chỉ cháy riềng</div></div><div class="price">75k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Sườn heo nướng</div></div><div class="price">85k/đĩa</div></div>
             <div class="menu-item"><div><div class="name">Sườn heo chiên mắm</div></div><div class="price">85k/đĩa</div></div>
@@ -225,7 +354,7 @@
           </div>
           <p class="menu-note">Heo mọi, dê nguyên con vui lòng đặt trước.</p>
         </div>
-        <div class="menu-cat">
+        <div class="menu-cat" id="nhom-ca">
           <h4>Cá</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Cá lóc nướng quay</div></div><div class="price">125k/con</div></div>
@@ -238,7 +367,7 @@
           </div>
           <p class="menu-note">Cá mú, cá chẽm, chình vui lòng chờ khoảng 15 phút.</p>
         </div>
-        <div class="menu-cat">
+        <div class="menu-cat" id="nhom-lau">
           <h4>Lẩu</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Lẩu gà lá giang</div></div><div class="price">259k/con</div></div>
@@ -252,7 +381,7 @@
             <div class="menu-item"><div><div class="name">Lẩu mực Đại Lãnh</div></div><div class="price">110k/người</div></div>
           </div>
         </div>
-        <div class="menu-cat">
+        <div class="menu-cat" id="nhom-um-ham">
           <h4>Món um, hầm</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Gà H'Mông hầm sen nấm</div></div><div class="price">489k/con</div></div>
@@ -261,7 +390,7 @@
             <div class="menu-item"><div><div class="name">Gà hầm bí đỏ (đặt trước)</div></div><div class="price">350k/con</div></div>
           </div>
         </div>
-        <div class="menu-cat">
+        <div class="menu-cat" id="nhom-best-seller">
           <h4>Best seller</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Mẹt gà 3 món</div></div><div class="price">400k</div></div>
@@ -269,7 +398,7 @@
             <div class="menu-item"><div><div class="name">Bào ngư hầm nấm / Vi cá hầm hạt sen / Tôm hùm</div></div><div class="price">Liên hệ</div></div>
           </div>
         </div>
-        <div class="menu-cat">
+        <div class="menu-cat" id="nhom-nuoc-uong">
           <h4>Nước giải khát &amp; Bia</h4>
           <div class="menu-list">
             <div class="menu-item"><div><div class="name">Trà xanh 0 độ / Pepsi / Sting</div></div><div class="price">14k</div></div>
@@ -282,7 +411,7 @@
             <div class="menu-item"><div><div class="name">Quy Nhơn chai</div></div><div class="price">7.5k</div></div>
           </div>
         </div>
-        <p class="menu-note">* Giá trên chưa gồm VAT. Món "Theo thời giá" tuỳ biến động thị trường hải sản — vui lòng gọi hotline để có giá mới nhất.</p>
+        <p class="menu-note">* Giá trên chưa gồm VAT. Món "Theo thời giá" tuỳ biến động thị trường hải sản — vui lòng gọi hotline để có giá mới nhất. Quán có xuất hoá đơn VAT, vui lòng báo trước khi thanh toán.</p>
       </div>
 
       <div class="menu-panel" id="tab-settiec">
@@ -345,6 +474,7 @@
         <a href="/gioi-thieu">Giới thiệu</a>
         <a href="/thuc-don">Thực đơn</a>
         <a href="/dat-tiec">Đặt tiệc</a>
+        <a href="/phong-vip">Phòng VIP</a>
         <a href="/khu-tre-em">Khu trẻ em</a>
         <a href="/lien-he">Liên hệ</a>
       </nav>
