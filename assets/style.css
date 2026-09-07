@@ -1156,3 +1156,15 @@
     .nav-actions .call-chip:not(.zalo-chip) svg{animation:none;}
     .nav-actions .call-chip::after{opacity:0;}
   }
+
+  /* ---------- Ảnh nhỏ cho từng món (nhóm món có ảnh) ---------- */
+  .menu-list.co-anh .menu-item{align-items:center; gap:12px;}
+  .mon-thumb{
+    flex:none; width:64px; height:64px; border-radius:16px; object-fit:cover;
+    border:2px solid var(--line); background:var(--surface-2);
+    transition:transform .18s ease, border-color .18s ease;
+  }
+  .menu-list.co-anh .menu-item:hover .mon-thumb{transform:scale(1.06); border-color:var(--clay);}
+  @media (max-width: 560px){
+    .mon-thumb{width:54px; height:54px; border-radius:13px;}
+  }

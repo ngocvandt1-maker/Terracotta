@@ -41,6 +41,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style-home.css">
 <link rel="preload" as="image" href="images/hero-nha-hang-len-den.jpg" fetchpriority="high">
 <script>
   /* Link cũ dạng trang-chu/#menu vẫn dùng được: đưa khách sang đúng trang mới */
@@ -145,38 +146,174 @@
     <div class="wrap hero-grid">
       <div>
         <p class="eyebrow">Nhà hàng sân vườn · Đặt tiệc · Sum vầy gia đình</p>
-        <h1>Bữa tiệc sum vầy trọn vẹn tại <em>Đồng Gia Viên</em></h1>
-        <p class="hero-desc">Nhà hàng sân vườn rộng rãi giữa tiểu cảnh hòn non bộ xanh mát, phục vụ món gia đình đậm vị quê nhà. Nhận đặt tiệc trọn gói cho mọi dịp: sinh nhật, họp mặt, liên hoan, tân gia, tiệc công ty. Có khu nhà banh cho bé — cả nhà vừa ăn ngon, vừa thư giãn trọn buổi.</p>
+        <h1>Đồng Gia<br><em>Viên</em></h1>
+        <p class="hero-slogan">Sân vườn xanh mát · Món quê đậm vị · Tiệc trọn gói mọi dịp</p>
+        <p class="hero-desc">Nhà hàng sân vườn rộng rãi giữa tiểu cảnh hòn non bộ tại Quy Nhơn — nơi cả nhà quây quần bên mâm cơm đậm vị quê nhà. Nhận đặt tiệc trọn gói cho sinh nhật, họp mặt, liên hoan, tân gia, tiệc công ty. Có khu nhà banh cho bé, ba mẹ thong thả trọn buổi.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="/thuc-don">Xem thực đơn</a>
-          <a class="btn btn-ghost" href="/dat-tiec">Đặt tiệc ngay</a>
-        </div>
-        <div class="info-strip">
-          <div class="info-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            <div><strong>10:00–22:00</strong> mỗi ngày</div>
-          </div>
-          <div class="info-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div><strong>Số 1 Trần Văn Dũng</strong>, Quy Nhơn – Gia Lai</div>
-          </div>
+          <a class="btn btn-primary" href="/dat-tiec">Đặt tiệc ngay</a>
+          <a class="btn btn-ghost" href="/thuc-don">Xem thực đơn</a>
+          <a class="btn btn-ghost" href="#khong-gian">Xem không gian quán</a>
         </div>
       </div>
-      <div class="hero-art-wrap">
-        <div class="hero-dot">SÂN VƯỜN<br>XANH MÁT</div>
-        <div class="hero-art">
-          <img fetchpriority="high" src="images/hero-nha-hang-len-den.jpg" width="1100" height="806" decoding="async" alt="Nhà hàng Đồng Gia Viên lên đèn buổi tối">
+      <div class="hero-photo">
+        <img src="images/hero-nha-hang-len-den.jpg" width="1100" height="806" fetchpriority="high" decoding="async" alt="Nhà hàng Đồng Gia Viên lên đèn buổi tối">
+        <div class="hero-thumbs">
+          <a href="#khong-gian" aria-label="Xem sảnh tiệc"><img src="images/sanh-tiec.jpg" width="825" height="619" loading="lazy" decoding="async" alt="Sảnh tiệc Đồng Gia Viên"></a>
+          <a href="#khong-gian" aria-label="Xem sân vườn bàn tiệc"><img src="images/san-vuon-ban-tiec.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Bàn tiệc giữa sân vườn Đồng Gia Viên"></a>
+          <a href="#khong-gian" aria-label="Xem khu nhà banh cho bé"><img src="images/khu-nha-banh.jpg" width="1100" height="1100" loading="lazy" decoding="async" alt="Khu nhà banh cho trẻ em"></a>
+          <a class="hero-thumb-more" href="#khong-gian">+8 ảnh</a>
         </div>
-        <div class="hero-badge">
-          <strong>10:00–22:00</strong>
-          <span>Mở cửa cả tuần — nhận đặt tiệc mọi ngày</span>
+      </div>
+    </div>
+    <div class="info-band">
+      <div class="wrap">
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><strong>10:00–22:00</strong> mở cửa cả tuần</div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong>Số 1 Trần Văn Dũng</strong>, P. Quy Nhơn</div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92Z"/></svg>
+          <div><strong>0931.7944.88</strong> – 0935.199.557</div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div><strong>Sảnh đến ~200 khách</strong></div>
         </div>
       </div>
     </div>
   </section>
-  <div class="blob-divider" aria-hidden="true">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,32 C150,60 350,0 600,28 C850,56 1050,8 1200,30 L1200,60 L0,60 Z" fill="var(--surface)"/></svg>
-  </div>
+  <div class="band"><div class="wrap"><span class="sq"></span>Đồng Gia Viên · Nhà hàng sân vườn Quy Nhơn<span class="sq"></span></div></div>
+  <!-- KHÔNG GIAN QUÁN -->
+  <section id="khong-gian">
+    <div class="wrap wrap-rong">
+      <div class="section-head">
+        <p class="eyebrow">Hình ảnh thực tế tại quán</p>
+        <h2>Không gian đãi tiệc</h2>
+        <p>Sảnh lớn có sân khấu, phòng VIP có karaoke, bàn tiệc giữa sân vườn và khu nhà banh cho bé.</p>
+      </div>
+      <div class="grid-photos">
+        <figure class="gp tall">
+          <img src="images/sanh-tiec-lon.jpg" width="825" height="619" loading="lazy" decoding="async" alt="Sảnh tiệc lớn tại Đồng Gia Viên">
+          <figcaption class="gp-cap">Sảnh lớn — đến ~200 khách</figcaption>
+        </figure>
+        <figure class="gp">
+          <img src="images/sanh-san-khau.jpg" width="825" height="619" loading="lazy" decoding="async" alt="Sảnh tiệc có sân khấu">
+          <figcaption class="gp-cap">Sảnh có sân khấu</figcaption>
+        </figure>
+        <figure class="gp">
+          <img src="images/phong-vip-trang-tri.jpg" width="825" height="619" loading="lazy" decoding="async" alt="Phòng VIP được trang trí">
+          <figcaption class="gp-cap">Phòng VIP</figcaption>
+        </figure>
+        <figure class="gp">
+          <img src="images/phong-karaoke.jpg" width="825" height="619" loading="lazy" decoding="async" alt="Phòng karaoke tại Đồng Gia Viên">
+          <figcaption class="gp-cap">Có karaoke</figcaption>
+        </figure>
+        <figure class="gp">
+          <img src="images/san-vuon-ban-tiec.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Bàn tiệc giữa sân vườn">
+          <figcaption class="gp-cap">Bàn tiệc sân vườn</figcaption>
+        </figure>
+        <figure class="gp">
+          <img src="images/khu-vui-choi-tre-em.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="Khu vui chơi trẻ em">
+          <figcaption class="gp-cap">Khu chơi cho bé</figcaption>
+        </figure>
+        <figure class="gp">
+          <img src="images/ban-cong-san-vuon.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Góc ban công nhìn ra sân vườn">
+          <figcaption class="gp-cap">Góc ban công</figcaption>
+        </figure>
+      </div>
+      <p class="kho-note">Xem thêm hình ảnh và bãi đỗ xe tại trang <a href="/gioi-thieu">Giới thiệu</a> · sảnh và phòng VIP tại trang <a href="/phong-vip">Phòng VIP</a>.</p>
+    </div>
+  </section>
+  <!-- GÓI TIỆC TIÊU BIỂU -->
+  <section id="goi-tiec">
+    <div class="wrap wrap-rong">
+      <div class="section-head">
+        <p class="eyebrow">16 mức set từ 135.000đ đến 400.000đ</p>
+        <h2>4 mức set tiêu biểu</h2>
+        <p>Mỗi mức có nhiều thực đơn set để chọn — dưới đây là một thực đơn mẫu của từng mức, tính theo đầu khách.</p>
+      </div>
+
+      <div class="combo-grid">
+        <article class="combo">
+          <div class="combo-pic">
+            <img src="images/nhom-khai-vi.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Món khai vị tại Đồng Gia Viên">
+            <span class="combo-tag">Ấm cúng</span>
+          </div>
+          <div class="combo-body">
+            <h3>Set 135.000đ / khách</h3>
+            <ul class="combo-list">
+              <li><span>Cá điêu hồng chiên mắm xoài</span></li>
+              <li><span>Sườn rim mặn</span></li>
+              <li><span>Lươn xào sả ớt</span></li>
+              <li><span>Canh riêu cua rau tập tàng</span></li>
+            </ul>
+            <p class="combo-sum">Kèm <b>cơm trắng, rau sống, tráng miệng, trà đá</b></p>
+            <a class="btn btn-primary" href="/dat-tiec">Xem mức này</a>
+          </div>
+        </article>
+
+        <article class="combo">
+          <div class="combo-pic">
+            <img src="images/goi-hai-san.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Gỏi hải sản tại Đồng Gia Viên">
+            <span class="combo-tag">Sum vầy</span>
+          </div>
+          <div class="combo-body">
+            <h3>Set 195.000đ / khách</h3>
+            <ul class="combo-list">
+              <li><span>Gỏi củ hũ dừa hải sản</span></li>
+              <li><span>Vẹm nướng mỡ hành</span></li>
+              <li><span>Tôm bạc rang muối</span></li>
+              <li><span>Lẩu hải sản + bún tươi</span></li>
+            </ul>
+            <p class="combo-sum">Kèm <b>cơm trắng, tráng miệng, trà đá</b></p>
+            <a class="btn btn-primary" href="/dat-tiec">Xem mức này</a>
+          </div>
+        </article>
+
+        <article class="combo">
+          <div class="combo-pic">
+            <img src="images/sup-tom-nguyen-con.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Món tôm tại Đồng Gia Viên">
+            <span class="combo-tag">Phổ biến nhất</span>
+          </div>
+          <div class="combo-body">
+            <h3>Set 225.000đ / khách</h3>
+            <ul class="combo-list">
+              <li><span>Chả ram tôm · Gỏi hải sản</span></li>
+              <li><span>Hàu nướng mỡ hành</span></li>
+              <li><span>Cá biển nướng cuốn bánh tráng</span></li>
+              <li><span>Lẩu hải sản + bún tươi</span></li>
+            </ul>
+            <p class="combo-sum">Kèm <b>cải xanh xào tỏi, cơm trắng, tráng miệng, trà đá</b></p>
+            <a class="btn btn-primary" href="/dat-tiec">Xem mức này</a>
+          </div>
+        </article>
+
+        <article class="combo">
+          <div class="combo-pic">
+            <img src="images/ca-hoi-nuong-sot-chua-ngot.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Món cá nướng tại Đồng Gia Viên">
+            <span class="combo-tag">Trang trọng</span>
+          </div>
+          <div class="combo-body">
+            <h3>Set 310.000đ / khách</h3>
+            <ul class="combo-list">
+              <li><span>Hàu nướng phô mai</span></li>
+              <li><span>Gà ta nướng Tây Bắc</span></li>
+              <li><span>Bê hấp tía tô</span></li>
+              <li><span>Cá mú chiên xù sốt me</span></li>
+            </ul>
+            <p class="combo-sum">Kèm <b>sứa nước lèo, rau xanh, tráng miệng, trà đá</b></p>
+            <a class="btn btn-primary" href="/dat-tiec">Xem mức này</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="kho-note">Giá chưa gồm VAT · hải sản theo thời giá. Xem đủ 16 mức và tính nhanh chi phí tại trang <a href="/dat-tiec">Đặt tiệc</a>.</p>
+    </div>
+  </section>
   <!-- LỐI VÀO CÁC TRANG -->
   <section id="kham-pha">
     <div class="wrap">
@@ -273,9 +410,7 @@
       </div>
     </div>
   </section>
-  <div class="blob-divider" aria-hidden="true" style="transform:scaleY(-1);">
-    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,32 C150,60 350,0 600,28 C850,56 1050,8 1200,30 L1200,60 L0,60 Z" fill="var(--bg)"/></svg>
-  </div>
+  <div class="band"><div class="wrap"><span class="sq"></span>Đặt tiệc · 0931.7944.88<span class="sq"></span></div></div>
   <!-- LIÊN HỆ NGẮN GỌN -->
   <section id="ghe-quan">
     <div class="wrap">

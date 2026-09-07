@@ -24,15 +24,18 @@ EOF
   mkhead "Đồng Gia Viên Restaurant — Nhà hàng sân vườn và đặt tiệc tại Quy Nhơn" \
          "Nhà hàng sân vườn tại Quy Nhơn với tiểu cảnh hòn non bộ xanh mát, món gia đình đậm vị và nhận đặt tiệc sinh nhật, họp mặt, liên hoan, tân gia. Có khu nhà banh cho bé." \
          "Đồng Gia Viên — Nhà hàng sân vườn và đặt tiệc tại Quy Nhơn" "/"
+  echo '<link rel="stylesheet" href="assets/style-home.css">'
   echo '<link rel="preload" as="image" href="images/hero-nha-hang-len-den.jpg" fetchpriority="high">'
   cat _redirect.html
   cat _ld-restaurant.html
   echo '</head>'; echo '<body>'; echo
   cat header.html; echo; echo '<main>'
-  cat hero.html
-  cat div-to-surface.html
+  cat hero-home.html
+  cat band-home-1.html
+  cat khong-gian.html
+  cat goi-tiec-home.html
   cat hub.html
-  cat div-to-bg.html
+  cat band-home-2.html
   cat cta-band.html
   echo '</main>'; echo
   cat footer.html; echo
