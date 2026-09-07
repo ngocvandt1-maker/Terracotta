@@ -1245,3 +1245,74 @@
     .section-head::after{width:82px;}
     .pkg-card::after, .room-card::after{width:20px; height:20px;}
   }
+
+  /* ================================================================
+     HOẠ TIẾT RIÊNG CHO TỪNG MỤC — vẽ nét, nhìn ra hình, đặt ở góc
+     ================================================================ */
+  #gioi-thieu::after, #khoanh-khac::after, #bai-do-xe::after, #dat-tiec::after,
+  #lien-he::after, #cau-hoi::after, #khu-tre-em::after, #phong-vip::after,
+  #menu::after, #kham-pha::after, #ghe-quan::after, #khong-gian::after,
+  #goi-tiec::after{
+    content:"";
+    position:absolute; z-index:0; pointer-events:none;
+    top:22px; right:30px; width:168px; height:168px;
+    opacity:0.13;
+    background-repeat:no-repeat; background-position:center; background-size:contain;
+  }
+  /* Mục xen kẽ đổi sang góc trái cho nhịp nhìn đỡ lặp */
+  #khoanh-khac::after, #lien-he::after, #phong-vip::after, #goi-tiec::after{
+    right:auto; left:30px; transform:scaleX(-1);
+  }
+
+  /* Giới thiệu — tiểu cảnh hòn non bộ, cây và mặt nước */
+  #gioi-thieu::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 66l16-26 11 17 8-12 13 21z'/%3E%3Cpath d='M70 66V40'/%3E%3Cpath d='M70 46c-7 0-11-5-11-11 7-1 11 4 11 11z'/%3E%3Cpath d='M70 52c7 0 12-5 12-12-8-1-12 5-12 12z'/%3E%3Cpath d='M8 76h84M14 84h30M56 84h30'/%3E%3C/svg%3E");}
+  /* Khoảnh khắc — máy ảnh */
+  #khoanh-khac::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='12' y='30' width='76' height='50' rx='7'/%3E%3Cpath d='M36 30l6-10h16l6 10'/%3E%3Ccircle cx='50' cy='55' r='15'/%3E%3Ccircle cx='50' cy='55' r='7'/%3E%3Ccircle cx='76' cy='40' r='2.6'/%3E%3C/svg%3E");}
+  /* Bãi đỗ xe — xe máy và biển báo chỗ đỗ */
+  #bai-do-xe::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='24' cy='68' r='13'/%3E%3Ccircle cx='76' cy='68' r='13'/%3E%3Cpath d='M24 68l14-20h20l8 20'/%3E%3Cpath d='M38 48l-6-10h12'/%3E%3Cpath d='M58 48l10-8 8 28'/%3E%3Cpath d='M50 22h28M64 22v8'/%3E%3C/svg%3E");}
+  /* Đặt tiệc — hai ly cụng mừng */
+  #dat-tiec::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 22l6 24c1 6 5 9 10 9s9-3 10-9l4-18'/%3E%3Cpath d='M34 55v22M24 80h20'/%3E%3Cpath d='M82 22l-6 24c-1 6-5 9-10 9s-9-3-10-9l-4-18'/%3E%3Cpath d='M66 55v22M56 80h20'/%3E%3Cpath d='M16 22h34M50 28h34'/%3E%3Cpath d='M50 12V6M42 14l-3-5M58 14l3-5'/%3E%3C/svg%3E");}
+  /* Liên hệ — ghim bản đồ */
+  #lien-he::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M50 88s26-26 26-46a26 26 0 1 0-52 0c0 20 26 46 26 46z'/%3E%3Ccircle cx='50' cy='40' r='10'/%3E%3Cpath d='M20 84h60' stroke-dasharray='4 7'/%3E%3C/svg%3E");}
+  /* Câu hỏi — hai bong bóng hỏi đáp */
+  #cau-hoi::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 26a8 8 0 0 1 8-8h40a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8H34l-14 12V56h-6z'/%3E%3Cpath d='M36 30a6 6 0 1 1 8 6c-2 1-3 3-3 5'/%3E%3Ccircle cx='41' cy='46' r='1.6' fill='%23b5502e' stroke='none'/%3E%3Cpath d='M86 74a8 8 0 0 0-8-8H54a8 8 0 0 0-8 8v10a8 8 0 0 0 8 8h16l12 8v-8h4z'/%3E%3C/svg%3E");}
+  /* Khu trẻ em — bóng và ngôi sao */
+  #khu-tre-em::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='38' cy='58' r='24'/%3E%3Cpath d='M14 58h48M38 34v48M20 42c12 6 24 6 36 0M20 74c12-6 24-6 36 0'/%3E%3Ccircle cx='76' cy='34' r='12'/%3E%3Cpath d='M76 16v-6M90 34h6M86 24l4-4'/%3E%3C/svg%3E");}
+  /* Phòng VIP — micro karaoke và nốt nhạc */
+  #phong-vip::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='34' y='10' width='22' height='40' rx='11'/%3E%3Cpath d='M24 42c0 12 9 21 21 21s21-9 21-21'/%3E%3Cpath d='M45 63v14M33 82h24'/%3E%3Cpath d='M74 24v26'/%3E%3Ccircle cx='69' cy='52' r='6'/%3E%3Cpath d='M74 24l12 4'/%3E%3C/svg%3E");}
+  /* Thực đơn — dĩa, đũa và nĩa */
+  #menu::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='50' cy='52' r='28'/%3E%3Ccircle cx='50' cy='52' r='18'/%3E%3Cpath d='M14 16v22c0 5 3 8 7 8s7-3 7-8V16M21 46v38'/%3E%3Cpath d='M86 16c-5 3-8 9-8 16s3 10 8 10M86 16v68'/%3E%3C/svg%3E");}
+  /* Khám phá — la bàn */
+  #kham-pha::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='50' cy='52' r='32'/%3E%3Cpath d='M64 38L44 46l-8 20 20-8z'/%3E%3Cpath d='M50 14v6M50 84v6M12 52h6M82 52h6'/%3E%3C/svg%3E");}
+  /* Ghé quán — cổng vào treo đèn lồng */
+  #ghe-quan::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23f3c268' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 88V34l34-20 34 20v54'/%3E%3Cpath d='M16 34h68'/%3E%3Cpath d='M38 88V58h24v30'/%3E%3Cellipse cx='50' cy='44' rx='9' ry='7'/%3E%3Cpath d='M50 37v-5M50 51v4'/%3E%3C/svg%3E");}
+  /* Không gian đãi tiệc — bàn tiệc tròn và ghế */
+  #khong-gian::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='50' cy='52' rx='30' ry='16'/%3E%3Cellipse cx='50' cy='52' rx='16' ry='8'/%3E%3Cpath d='M50 68v16M34 88h32'/%3E%3Ccircle cx='14' cy='42' r='7'/%3E%3Ccircle cx='86' cy='42' r='7'/%3E%3Ccircle cx='50' cy='24' r='7'/%3E%3C/svg%3E");}
+  /* Gói tiệc — nồi lẩu bốc khói */
+  #goi-tiec::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23b5502e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 52h64l-6 26a6 6 0 0 1-6 5H30a6 6 0 0 1-6-5z'/%3E%3Cpath d='M12 52h76'/%3E%3Cpath d='M18 60h-6a6 6 0 0 1 0-12M82 60h6a6 6 0 0 0 0-12'/%3E%3Cpath d='M36 40c-4-5 4-9 0-14M50 38c-5-6 5-11 0-17M64 40c-4-5 4-9 0-14'/%3E%3C/svg%3E");}
+
+  /* Nền tối: hoạ tiết cần đậm hơn mới nhìn rõ */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) #gioi-thieu::after,
+    :root:not([data-theme="light"]) #khoanh-khac::after,
+    :root:not([data-theme="light"]) #bai-do-xe::after,
+    :root:not([data-theme="light"]) #dat-tiec::after,
+    :root:not([data-theme="light"]) #lien-he::after,
+    :root:not([data-theme="light"]) #cau-hoi::after,
+    :root:not([data-theme="light"]) #khu-tre-em::after,
+    :root:not([data-theme="light"]) #phong-vip::after,
+    :root:not([data-theme="light"]) #menu::after,
+    :root:not([data-theme="light"]) #kham-pha::after,
+    :root:not([data-theme="light"]) #ghe-quan::after,
+    :root:not([data-theme="light"]) #khong-gian::after,
+    :root:not([data-theme="light"]) #goi-tiec::after{opacity:0.2;}
+  }
+
+  /* Màn hẹp: thu nhỏ và nhạt bớt để không lấn chữ */
+  @media (max-width: 900px){
+    #gioi-thieu::after, #khoanh-khac::after, #bai-do-xe::after, #dat-tiec::after,
+    #lien-he::after, #cau-hoi::after, #khu-tre-em::after, #phong-vip::after,
+    #menu::after, #kham-pha::after, #ghe-quan::after, #khong-gian::after,
+    #goi-tiec::after{width:104px; height:104px; top:14px; right:14px; opacity:0.10;}
+    #khoanh-khac::after, #lien-he::after, #phong-vip::after, #goi-tiec::after{left:14px; right:auto;}
+  }
