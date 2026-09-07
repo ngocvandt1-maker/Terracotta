@@ -62,7 +62,7 @@
   body::before{
     content:"";
     position:fixed; inset:0; z-index:1; pointer-events:none;
-    opacity:0.05; mix-blend-mode:multiply;
+    opacity:0.042; mix-blend-mode:multiply;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
   @media (prefers-reduced-motion: reduce){
@@ -1167,4 +1167,81 @@
   .menu-list.co-anh .menu-item:hover .mon-thumb{transform:scale(1.06); border-color:var(--clay);}
   @media (max-width: 560px){
     .mon-thumb{width:54px; height:54px; border-radius:13px;}
+  }
+
+  /* ================================================================
+     HOẠ TIẾT TRANG TRÍ — nền sân vườn, làm nổi từng mục
+     Tất cả đều mờ, không bắt chuột, nằm dưới chữ (.wrap có z-index 2)
+     ================================================================ */
+
+  /* ---- 1. Tán lá thưa phủ nhẹ toàn trang (gợi không gian sân vườn) ---- */
+  body::after{
+    content:"";
+    position:fixed; inset:0; z-index:1; pointer-events:none;
+    opacity:0.042; mix-blend-mode:multiply;
+    background-repeat:repeat;
+    background-size:440px 440px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cg fill='%232e2019'%3E%3Cpath d='M40 30c-16 8-22 24-22 40 18 0 30-13 30-29 0-4-2-8-8-11z'/%3E%3Cpath d='M18 70c14 2 24-4 30-14-10-6-24-4-32 6-1 3-1 6 2 8z' opacity='.7'/%3E%3Cpath d='M215 55c14 10 18 27 15 43-18-3-28-18-25-34 1-4 4-7 10-9z'/%3E%3Cpath d='M240 96c-14 0-23-8-27-19 11-4 24 0 30 11 1 3 0 6-3 8z' opacity='.7'/%3E%3Cpath d='M110 190c-16 8-22 24-22 40 18 0 30-13 30-29 0-4-2-8-8-11z' opacity='.85'/%3E%3Cpath d='M88 230c14 2 24-4 30-14-10-6-24-4-32 6-1 3-1 6 2 8z' opacity='.6'/%3E%3Cpath d='M275 215c14 10 18 27 15 43-18-3-28-18-25-34 1-4 4-7 10-9z' opacity='.8'/%3E%3Ccircle cx='160' cy='120' r='3'/%3E%3Ccircle cx='60' cy='150' r='2.5' opacity='.7'/%3E%3Ccircle cx='250' cy='160' r='2.5' opacity='.7'/%3E%3Ccircle cx='185' cy='275' r='3' opacity='.6'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* ---- 2. Vệt sáng mềm ở mỗi mục: nắng vàng góc trên, bóng cây góc dưới ---- */
+  section::before{
+    content:"";
+    position:absolute; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(560px 320px at 92% -4%, rgba(232,162,48,0.13), transparent 68%),
+      radial-gradient(520px 300px at -4% 104%, rgba(31,92,82,0.09), transparent 70%);
+  }
+  /* Mục xen kẽ đảo chiều nguồn sáng cho đỡ lặp */
+  section:nth-of-type(even)::before{
+    background:
+      radial-gradient(560px 320px at 6% -4%, rgba(181,80,46,0.10), transparent 68%),
+      radial-gradient(520px 300px at 104% 104%, rgba(232,162,48,0.10), transparent 70%);
+  }
+
+  /* ---- 3. Hoa văn nhỏ dưới tiêu đề mục, dẫn mắt vào nội dung ---- */
+  .section-head::after{
+    content:"";
+    display:block; width:96px; height:16px; margin:16px auto 0;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='16' viewBox='0 0 96 16'%3E%3Cg fill='none' stroke='%23e8a230' stroke-width='1.6'%3E%3Cpath d='M2 8h24' stroke-linecap='round'/%3E%3Cpath d='M70 8h24' stroke-linecap='round'/%3E%3C/g%3E%3Cg fill='%23b5502e'%3E%3Cpath d='M48 1c-4 3-6 7-6 11 5 0 8-4 8-8 0-1-1-2-2-3z'/%3E%3Cpath d='M48 1c4 3 6 7 6 11-5 0-8-4-8-8 0-1 1-2 2-3z' opacity='.55'/%3E%3C/g%3E%3Cg fill='%23e8a230'%3E%3Ccircle cx='34' cy='8' r='2.4'/%3E%3Ccircle cx='62' cy='8' r='2.4'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+  }
+  /* Vài mục đặt tiêu đề lệch trái thì hoa văn cũng lệch theo */
+  .room-gallery-title::after, .crumbs + .section-head::after{margin-left:auto; margin-right:auto;}
+
+  /* ---- 4. Khối nền tối: quầng đèn ấm + ánh xanh, gợi phòng VIP lên đèn ---- */
+  .booking, .calc, .karaoke, .cta-band, footer{position:relative;}
+  .booking, .calc, .karaoke, .cta-band, footer{overflow:hidden;}
+  .booking::after, .calc::after, .karaoke::after, .cta-band::after, footer::after{
+    content:"";
+    position:absolute; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(420px 260px at 88% -12%, rgba(243,194,104,0.16), transparent 66%),
+      radial-gradient(380px 240px at -6% 108%, rgba(63,156,140,0.14), transparent 68%);
+  }
+  /* Chữ và nút trong khối tối luôn nằm trên lớp sáng */
+  .booking > *, .calc > *, .karaoke > *, .cta-band > *, footer > *{position:relative; z-index:1;}
+
+  /* ---- 5. Thẻ nội dung: chấm nhẹ ở góc cho đỡ phẳng ---- */
+  .pkg-card, .room-card, .hub-card, .faq-item{position:relative;}
+  .pkg-card::after, .room-card::after{
+    content:"";
+    position:absolute; right:14px; top:14px; width:26px; height:26px; pointer-events:none;
+    opacity:0.16;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cg fill='%231f5c52'%3E%3Cpath d='M13 2c-7 4-10 11-10 18 8 0 14-6 14-13 0-2-1-4-4-5z'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+  }
+  .pkg-card.featured::after{opacity:0.24;}
+
+  /* ---- Nền tối: hoạ tiết lá phải sáng lên mới thấy ---- */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) body::after{mix-blend-mode:screen; opacity:0.05; filter:invert(1);}
+    :root:not([data-theme="light"]) section::before{opacity:0.7;}
+  }
+  :root[data-theme="dark"] body::after{mix-blend-mode:screen; opacity:0.05; filter:invert(1);}
+  :root[data-theme="dark"] section::before{opacity:0.7;}
+
+  /* ---- Máy yếu / màn hẹp: giảm bớt cho nhẹ ---- */
+  @media (max-width: 640px){
+    body::after{background-size:300px 300px; opacity:0.035;}
+    .section-head::after{width:82px;}
+    .pkg-card::after, .room-card::after{width:20px; height:20px;}
   }
